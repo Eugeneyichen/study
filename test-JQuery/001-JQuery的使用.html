@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-JQuery的使用</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	window.jQuery || document.write('<script src="js/jquery-1.12.4.js"><\/script>')
+</script>
+<script>
+	jQuery(document).ready(function(){
+		console.log('hello');
+	})
+	jQuery(document).ready(function(){
+		console.log('world');
+	})
+	$(document).ready(function(){
+		console.log('sawadika')
+	})
+	$(document).ready(function(){
+		console.log('kongnijiwa')
+	})
+	$(function(){
+		console.log('alaso')
+	})
+	$(function(){
+		console.log('aladagu')
+	})
+	window.onload = function(){
+		console.log('aa')
+	}
+	window.onload = function(){
+		console.log('bb')
+	}
+
+
+
+
+
+
+
+
+/*
+	function isSymmetryNum(start,end){
+	for(var i=start;i<end+1;i++){
+		var iInversionNumber=+(i.toString().split("").reverse().join(""));
+		
+		if(iInversionNumber===i&&i>10){
+			console.log(i);
+		}
+		
+	}
+}
+isSymmetryNum(1,10000);
+*/
+</script>
+</html>

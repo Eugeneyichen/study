@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">s
+	<title>168-自定义滚动条-滚动文字.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 500px;
+			margin:100px auto;
+			position: relative;
+		}
+		#fat{
+			width: 30px;
+			height: 322px;
+			background-color: purple;
+			position: absolute;
+			top: 0;
+			left: 302px;
+		}	
+		#son{
+			width: 30px;
+			height: 30px;
+			background-color: yellow;
+			position: absolute;
+		}
+		#content{
+			width: 300px;
+			height: 320px;
+			border:1px solid #999;
+			position: relative;
+		}
+		#txt{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="fat">
+			<div id="son"></div>
+		</div>
+		<div id="content">
+			<div id="txt">hello</div>
+		</div>
+	</div>
+</body>
+<script>
+	
+</script>
+</html>

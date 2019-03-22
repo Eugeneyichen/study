@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-动画方法-停止动画.html</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #f67;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn1">kaishi</button>
+	<button id="btn2">tingzhi</button>
+	<div></div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$('#btn1').on('click',function(){
+			$('div').animate({width:200},3000)
+			$('div').animate({height:200},3000)
+			$('div').animate({opacity:0.5},3000)
+		})
+		$('#btn2').on('click',function(){
+			// $('div').stop()//只停止当前的 后面继续执行
+			// $('div').stop(false,false)//只停止当前的 后面继续执行
+			// $('div').stop(true,false)//直接停完
+			// $('div').stop(true,true)//第一个瞬间结束 后面停止
+			$('div').stop(false,true)//第一个瞬间停止 后面继续执行
+
+		})
+	})
+</script>
+</html>

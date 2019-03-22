@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>165-自定义滚动条.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#fat{
+			width: 50px;
+			height: 600px;
+			background-color: purple;
+			position: relative;
+			margin: 0 auto;
+		}
+		#son{
+			width: 50px;
+			height: 50px;
+			background: yellow;
+			position: absolute;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: #f67;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="fat">
+		<div id="son"></div>
+	</div>	
+	<div id="box"></div>
+</body>
+<script>
+	var oFat = document.getElementById('fat')
+	var oSon = document.getElementById('son')
+	var oBox = document.getElementById('box')
+	var disX = 0,disY = 0
+	oSon.onmousedown = function(ev){
+		disY = ev.clientY - oSon.offsetTop;
+		document.onmousemove =  function(ev){
+			var t = ev.clientY - disY
+			if(t < 0){
+				t = 0;
+			}else if(t > oFat.offsetHeight - oSon.offsetHeight){
+				t = oFat.offsetHeight - oSon.offsetHeight;
+			}
+			var scale = t /(oFat.offsetHeight - oSon.offsetHeight)
+			oSon.style.top = t + 'px'
+			oBox.style.width = 100 + 500 * scale + 'px'
+			oBox.style.height = 100 + 500 * scale + 'px'
+			oBox.style.opacity = 0 + 1 * scale
+		}
+		document.onmouseup = function(ev){
+			document.onmousemove = null
+			document.onmousedown = null
+		} 
+	}
+</script>
+</html>

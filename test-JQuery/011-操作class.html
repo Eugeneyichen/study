@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>011-操作class.html</title>
+	<style>
+		.box1{
+			width: 200px;
+			height: 200px;
+		}
+		.box2{
+			border: 5px solid purple;
+			box-sizing: border-box;
+		}
+		.box3{
+			background-color: yellow;
+		}
+		.box4{
+			color: purple;
+			text-align: center;
+			line-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">切换</button>
+	<div>pan</div>
+	<div class="box1 box2 box3 box4">do</div>
+	<div>ra</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		// $('div').addClass('box1 box2 box3 box4')
+
+		// $('div').removeClass('box1 box2 box3 box4')
+
+		var oBtn = document.getElementById('btn')
+		oBtn.onclick = function(){
+			$('div').toggleClass('box1 box2 box3 box4')
+		}
+	})
+</script>
+</html>

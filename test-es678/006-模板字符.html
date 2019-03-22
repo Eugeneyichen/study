@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>006-模板字符.html</title>
+</head>
+<body>
+	<button id="btn">点击</button>
+</body>
+<script>
+	var oBtn = document.getElementById('btn')
+	var name = 'wyc';
+	oBtn.onclick = function(){
+		var html = `
+			<ul>
+				<li>${name}</li>
+				<li>${name}</li>
+				<li>${name}</li>
+			</ul>
+		`
+		document.body.innerHTML = html;
+	}
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>169-enen.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#fat{
+			width: 500px;
+			height: 500px;
+			background-color: purple;
+			position: relative;
+			margin:100px auto;
+		}
+		#son{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="fat">
+		<div id="son"></div>
+	</div>
+</body>
+<script>
+	var oFat = document.getElementById('fat');
+	var oSon = document.getElementById('son');
+	var disX = 0,disY = 0
+	oSon.onmousedown = function(ev){
+		disX = ev.clientX - oSon.offsetLeft;
+		disY = ev.clientY - oSon.offsetTop;
+		console.log(ev.clientX,ev.clientY)
+		document.onmousemove =function(ev){
+			var l = ev.clientX - disX;
+			var t = ev.clientY - disY;
+			if( l < 0){
+				l = 0;
+			}else if(l > oFat.offsetWidth - oSon.offsetWidth){
+				l = oFat.offsetWidth - oSon.offsetWidth
+			}
+			if(t < 0){
+				t=0
+			}else if(t > oFat.offsetHeight - oSon.offsetHeight){
+				t = oFat.offsetHeight - oSon.offsetHeight
+			}
+
+			oSon.style.left = l + 'px';
+			oSon.style.top = t + 'px';
+		}
+		document.onmouseup = function(ev){
+			document.onmousemove = null;
+			document.onmousedown = null;
+		}
+	}
+</script>
+</html>

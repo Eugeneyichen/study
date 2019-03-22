@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>006-jq静态方法-map.html</title>
+</head>
+<body>
+
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	var arr1 = '    nd g g'
+	var arr2 = $.trim(arr1,function(){})
+	console.log(arr1)
+	console.log(arr2)
+
+	var obj1 = {name:'Amy',age:18}
+	var obj2 = {name:'Wyc'}
+	// var obj3 = $.extend(obj1,obj2)
+	// console.log(obj3)
+	// console.log(obj1)
+	var obj4 = $.extend({},obj1,obj2)
+	console.log(obj4)
+	console.log(obj1)
+
+	console.log($.isWindow(window))
+	console.log($.isWindow())
+	console.log($.isArray([1,2,3]))
+	console.log($.isArray({1:'aaa',2:'bbb',length:2}))
+	console.log($.isFunction(function(){}))
+	console.log($.isFunction({}))
+
+</script>
+</html>

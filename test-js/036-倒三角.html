@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>036-倒三角</title>
+	<style>
+		.span{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+		}
+		.span1{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border:1px solid pink;
+			text-align: center;
+			line-height: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script>
+	for(var i=1;i<=10;i++){
+		for(var f=1;f<=10-i;f++){
+			document.write("<span class='span'></span>")
+		}
+		for(var j=1;j<=i;j++){
+			document.write("<span class='span1'>*</span>")
+		}
+		document.write('<br>')
+	}
+</script>
+</html>

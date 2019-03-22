@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>069-平移</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 600px;
+			height: 600px;
+			border:1px solid #000;
+			margin: 0 auto;
+		}
+		li{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			margin-top: 40px;
+			list-style: none;
+		}
+		li:frist-child{
+			transform: rotate(60deg);
+		}
+		li:nth-child(2){
+			background-color: yellow;
+			transform: translate(50px,100px);
+		}
+		li:nth-child(3){
+			background-color: green;
+			transform: translate(-50px,-100px);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

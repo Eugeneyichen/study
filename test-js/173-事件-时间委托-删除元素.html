@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>173-事件-时间委托-删除元素.html</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>li1<a href="javascript:;" class="del">删除</a></li>
+		<li>li2<a href="javascript:;" class="del">删除</a></li>
+		<li>li3<a href="javascript:;" class="del">删除</a></li>
+		<li>li4<a href="javascript:;" class="del">删除</a></li>
+		<li>li5<a href="javascript:;" class="del">删除</a></li>
+		<li>li6<a href="javascript:;" class="del">删除</a></li>
+		<li>li7<a href="javascript:;" class="del">删除</a></li>
+		<li>li8<a href="javascript:;" class="del">删除</a></li>
+		<li>li9<a href="javascript:;" class="del">删除</a></li>
+	</ul>
+</body>
+<script>
+	var oUl = document.getElementById('ul1')
+	var aA = document.getElementsByTagName('a')
+	for(var i=0;i<aA.length;i++){
+		aA[i].onclick = function(){
+			this.parentNode.parentNode.removeChild(this.parentNode);
+		}
+	}
+	// oUl.addEventListener('click',function(ev){
+	// 	if(ev.target.className == 'del'){
+	// 		oUl.removeChild(ev.target.parentNode)
+	// 	}
+	// },false)
+</script>
+</html>

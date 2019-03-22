@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>031-盒模型-分类</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: purple;
+			border:10px solid orange;
+			padding:10px;
+			margin: 10px;
+			box-sizing: border-box;
+			/*IE盒模型*/
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			background: purple;
+			border:10px solid orange;
+			padding:10px;
+			margin: 10px;
+			box-sizing: content-box;
+			/*标准和模型*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box1"></div>
+</body>
+</html>

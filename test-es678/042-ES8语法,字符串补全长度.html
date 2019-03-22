@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-ES8语法,字符串补全长度.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	console.log('x'.padStart(5,'wyc'))//wycwx
+	console.log('x'.padEnd(5,'wyc'))//xwycw
+
+	console.log('20'.padStart(10,'wwww-yy-cc'))//wwww-yy-20
+	console.log('03-20'.padStart(10,'wwww-yy-cc'))//wwww-03-20
+
+	console.log('1'.padStart(10,'0'))//0000000001
+	console.log('123'.padStart(10,'0'))//0000000123
+
+	console.log('1'.padEnd(10,'0'))//1000000000
+	console.log('123'.padEnd(10,'0'))//1230000000
+</script>
+</html>

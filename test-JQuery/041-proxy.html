@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>041-proxy.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border:1px solid #000;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div class="div3" style="display: none">div3</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		console.log($('div').is('.div3'))//检查是否有该选择器
+	})
+
+	var fn = function(){
+		console.log(this)
+	}
+	fn()
+
+	var fn1 = $.proxy(fn,{name:'wyc'})//改变this指向
+	fn1();
+
+
+
+	console.log($('div:hidden'))//匹配所有不可见元素
+	console.log($('div:visible'))//匹配所有可见元素
+
+	$('div').hover(function(){//hover的用法 
+		console.log('over')
+	},function(){
+		console.log('out')
+	})
+</script>
+</html>

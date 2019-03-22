@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>209-边界-邮箱</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">发布</button>
+</body>
+<script>
+	var oTxt = document.getElementById('txt')
+	var oBtn = document.getElementById('btn')
+	oBtn.onclick = function(){
+		// 1160178908@qq.com
+		var wyc = /^\w+@[a-z0-9]+\.[a-z0-9]{2,5}$/
+
+		if(wyc.test(oTxt.value)){
+			alert('合法')
+		}else{
+			alert('不合法')
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>142-事件处理.html</title>
+</head>
+<body>
+	<button id="btn1">点我点我</button>
+	<button id="btn2">移除事件</button>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	// oBtn1.onclick = function(){
+	// 	alert('sb')
+	// }
+	function wzq(){
+		alert('zs')
+	}
+	function wyc(){
+		alert('zk')
+	}
+	function why(){
+		alert('sb')
+	}
+
+	oBtn1.addEventListener('click',wzq,false)
+	oBtn1.addEventListener('click',wyc,false)
+	oBtn1.addEventListener('click',why,false)
+	oBtn1.addEventListener('click',function(){
+		alert('zzzz')
+	},false)
+	oBtn2.removeEventListener('click',why,false)
+
+</script>
+</html>

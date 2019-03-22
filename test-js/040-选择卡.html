@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>040-选择卡</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			overflow: hidden;
+		}
+		li{
+			list-style: none;
+		}
+		#tab-list li{
+			float: left;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			cursor: pointer;
+		}
+		#tab-container li{
+			width: 400px;
+			height: 600px;
+			border:1px solid black;
+			font-size: 40px;
+			text-align: center;
+			line-height: 600px;
+			display: none;
+		}
+		.active{
+			border-bottom: 2px solid #ff6700;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="tab-list">
+		<li class="active">热门</li>
+		<li>电视</li>
+		<li>音乐</li>
+		<li>电影</li>
+	</ul>
+	<ul id="tab-container">
+		<li style="display: block;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script>
+	var aBtn = document.querySelectorAll('#tab-list li')
+	var aContent = document.querySelectorAll('#tab-container li')
+	for(var i=0;i<aBtn.length;i++){
+		// aBtn[i].index=i
+		aBtn[i].onclick=function(){
+			// for(var j=0;j<aBtn.length;j++){
+			// 	aBtn[j].className=''
+			// 	aContent[j].style.display='none'
+			// }
+			this.className='active'
+			// aContent[this.index].style.display='block'
+		}
+	}
+</script>
+</html>

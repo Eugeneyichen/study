@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-js内部使用</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: pink;
+			margin: 100px auto;
+	</style>
+	<script>
+		function toBig(){
+			var oDive = document.getElementById('box');
+			oDive.style.width='400px';
+			oDive.style.height='400px';
+			oDive.style.background='green';
+		}
+		function tosmall(){
+			var oDive = document.getElementById('box');
+			oDive.style.width='200px';
+			oDive.style.height='200px';
+			oDive.style.background='pink';
+		}
+	</script>
+</head>
+<body>
+	<div id="box" onmouseover="toBig()" onmouseout="tosmall()">	
+	</div>
+</body>
+</html>

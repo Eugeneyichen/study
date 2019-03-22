@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>004-测试</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width: 3rem;
+			/*float: left;*/
+		}
+		h4{
+			font-size: 0.4rem;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: ;
+		}
+	</style>
+</head>
+<body>
+	<!-- <img src="image/pjy1.jpg" alt=""> -->
+	<img src="image/pjy1.jpg" alt="">
+	<h4>我是朴孝敏 我叫朴智妍</h4>
+	<div class="box"></div>
+</body>
+<script>
+	(function(win,doc){
+		var oRoot = document.getElementsByTagName('html')[0];
+		function refreshFontSize(){
+			var iWidth = doc.body.clientWidth || doc.documentElement.clientWidth;//获取视口大小
+			var iFontSize = iWidth / 10;//rem和px的转换
+			oRoot.style.fontSize = iFontSize + 'px';
+		}	
+		win.addEventListener('resize',refreshFontSize,false);//监听视口的大小
+		win.addEventListener('DOMContentLoaded',refreshFontSize,false);//监听DOM节点加载完毕后执行
+	})(window,document)
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>090-添加删除</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+</body>
+<script>
+	var oUl1 = document.getElementById('ul1')
+	// console.log(oUl1[)
+	var aUl1 =oUl1.children;
+	var oLi = document.createElement('li')
+	var ali2 = document.createElement('li')
+	oLi.innerHTML='4'
+	oUl1.appendChild(oLi)
+	ali2.innerHTML='0'
+	oUl1.insertBefore(ali2,oUl1.firstChild)
+
+	aUl1[1].parentNode.removeChild(aUl1[1])
+
+</script>
+</html>

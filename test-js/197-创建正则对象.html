@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>197-创建正则对象.html</title>
+	<script>
+		// var str = 'abc abe abd'
+		// var xin = new RegExp('a','g')
+		// var xin2 = /a/g
+		// console.log(str.replace(xin,'$'))
+		// console.log(str.replace(xin2,'$'))
+
+		var str = '$130RMB';
+		var str1 = '$130RM 	B';
+		console.log(str);
+		console.log(str.replace(/\$/,'￥'))
+		console.log(str.replace(/RMB/,'USD'))
+		console.log(str1.replace(/\t/,'*'))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

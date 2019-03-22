@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-倒三角</title>
+	<style>
+		.span1{
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+		}
+		.span2{
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+		}
+	</style>
+	<script>
+		for(var i=1;i<=5;i++){
+			for(var z=1;z<=5-i;z++){
+				document.write("<span class='span1'></span>")
+			}
+			for(var j=1;j<=i;j++){
+				document.write("<span class='span2'>*</span>")
+			}
+			document.write("<br>")
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

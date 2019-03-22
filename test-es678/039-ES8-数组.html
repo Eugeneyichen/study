@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>039-ES8-数组.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var obj = {
+		0:'aa',
+		1:'bb',
+		length:2
+	}
+	console.log(obj)
+	let arr = Array.from(obj);
+	console.log(obj)
+	console.log(arr)
+
+
+	let arr1 = [11,22,33,44];
+	console.log(arr1)
+	console.log(arr1.find(n=>n>23))//33
+	console.log(arr1.find(n=>n>21))//22
+	console.log(arr1.find(n=>n<33))//11
+	console.log(arr1.find(n=>n>55))//undefined
+
+	console.log(arr1.findIndex(n=>n>21))//1
+	console.log(arr1.findIndex(n=>n>34))//3
+	console.log(arr1.findIndex(n=>n>99))//-1
+
+	console.log(arr1.includes(11))//true
+	console.log(arr1.includes(55))//false
+
+	let a = 3**2
+	console.log(a)
+
+</script>
+</html>

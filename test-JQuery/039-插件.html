@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>039-插件</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			border:1px solid #000;
+			margin-top: 10px;
+		}
+		.div1{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+		.div2{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<button>点击</button>
+	<div class="div1">div1</div>
+	<div class="div2">div2</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/cha.js"></script>
+<script>
+		$('button').on('click',function(){
+			$('div').setCss('width','400px').animate({height:400})
+		})
+
+</script>
+</html>

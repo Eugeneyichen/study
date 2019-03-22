@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-css优先级</title>
+	<style>
+		p.p1{
+			color:red;
+		}
+		p#p1{
+			color: yellow;
+		}	
+		p#p1.p1{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<p class="p1" id="p1">我是段落1</p>
+</body>
+</html>

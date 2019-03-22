@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>099-克隆节点.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box1{
+			/*float: left;*/
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		#box2{
+			/*float: left;*/
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="cloneflase">
+	<input type="button" id="btn2" value="clonetrue">
+	<div id="box1">pink</div>
+	<div id="box2">yellow</div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	var oBox1 = document.getElementById('box1')
+	var oBox2 = document.getElementById('box2')
+
+	oBtn1.onclick = function(){
+		var newObox = oBox1.cloneNode()
+		document.body.appendChild(newObox)
+	}
+	oBtn2.onclick = function(){
+		var newObox = oBox2.cloneNode(true)
+		document.body.appendChild(newObox)
+	}
+</script>
+</html>

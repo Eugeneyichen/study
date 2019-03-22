@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-单例模式-惰性登陆框.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.login{
+			/*display: none;*/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -150px;
+			margin-left: -100px;
+			width: 200px;
+			height: 300px;
+			background-color:gray;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn" value="登录">
+	<!-- <div class="login"></div> -->
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var oLogin = document.querySelector('.login');
+
+	// var obj = null;
+	// function createsingle(){
+	// 	if(!obj){
+	// 		var oDiv = document.createElement('div');
+	// 		oDiv.className = 'login';
+	// 		document.body.appendChild(oDiv);
+	// 		obj = oDiv
+	// 	}
+		
+	// }
+	function getSingle(fn){
+		var obj = null;
+		return function(){
+			if(!obj){
+				obj = fn();
+			}
+			return obj;
+		}
+	}
+
+	function createSingle(){
+		var oDiv = document.createElement('div');
+		oDiv.className = 'login';
+		document.body.appendChild(oDiv);
+		return oDiv;
+	}
+	var createSingleGetSingle =  getSingle(createSingle);
+	oBtn.onclick = function(){
+		// oLogin.style.display = 'block'
+		// var oDiv = document.createElement('div');
+		// oDiv.className = 'login';
+		// document.body.appendChild(oDiv);
+		createSingleGetSingle();
+	}
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>003-const-常量基本定义.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//常量不可以再次赋值
+	/*
+	var PI = 3.1415926;
+	PI = 5485454;
+	console.log(PI)
+	
+
+	const GU = 3.1415926;
+	GU = 5485454;//Uncaught TypeError: Assignment to constant variable.
+	console.log(gu)
+	*/
+
+	//定义常量的时候必须赋初值
+	/*
+	var PI;
+	PI = 3.1415926;
+	console.log(PI)
+	
+	const PI;
+	PI = 3.1415926;//Uncaught SyntaxError: Missing initializer in const declaration
+	console.log(PI)
+	*/
+
+	//const定义的常量保证的是常量的地址不可以改变
+	/*
+	const GU={
+		username:"wyc",
+		age:18
+	}
+	GU = {}//Uncaught TypeError: Assignment to constant variable.
+	console.log(GU)
+	
+	const GU={
+		username:"wyc",
+		age:18
+	}
+	console.log(GU)
+	*/
+</script>
+</html>

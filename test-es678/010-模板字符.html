@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-模板字符.html</title>
+</head>
+<body>
+	<button id="btn">添加</button>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var name = "谁能凭爱意要富士山私有"
+
+	oBtn.onclick = function(){
+		var html = `
+			<ul>
+				<li>${name}</li>
+				<li>${name}</li>
+				<li>${name}</li>
+				<li>${name}</li>
+			</ul>
+		`
+		document.body.innerHTML = html;
+	}
+</script>
+</html>

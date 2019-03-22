@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>073-获取子节点-变色</title>
+	
+</head>
+<body>
+	<ul id="ul">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+</body>
+<script>
+	var oUl = document.getElementById('ul')
+	var aLi = oUl.children;
+	var orign = '';
+	for(var i=0;i<aLi.length;i++){
+		if(i%2==0){
+			aLi[i].style.background='pink';
+		}else{
+			aLi[i].style.background='yellow';
+		}
+		aLi[i].onmouseover = function(){
+			orign=this.style.background;
+			this.style.background='red';
+		}
+		aLi[i].onmouseout = function(){
+			// this.style.background='red';
+			this.style.background=orign;
+		}
+	}		
+</script>
+</html>

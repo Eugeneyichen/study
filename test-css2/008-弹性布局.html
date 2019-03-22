@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>008-弹性布局.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 800px;
+			height: 700px;
+			border:1px solid #f67;
+			margin: 50px auto;
+			display: flex;
+			/* flex-direction: column-reverse; */
+			/*flex-direction: column;*/
+			/*flex-direction: row;*/
+			/*flex-direction: row-reverse;*/
+			/*flex-wrap: nowrap;*/
+			flex-wrap: wrap;
+			/*flex-wrap: wrap-reverse;*/
+		}
+		.box{
+			height: 50px;
+		}
+		.box1{
+			width: 100px;
+			background-color: red;
+		}
+		.box2{
+			width: 150px;
+			background-color: yellow;
+		}
+		.box3{
+			width: 600px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<p class="box box1"></p>
+		<p class="box box2"></p>
+		<p class="box box3"></p>
+	</div>
+</body>
+</html>

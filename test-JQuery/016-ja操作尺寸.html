@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 400px;
+			height: 400px;
+			overflow: auto;
+		}
+		.son{
+			width: 3000px;
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<button id="btn">点击</button>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		var oBtn = $('button')[0];
+
+		oBtn.onclick = function(){
+			console.log($('.father').scrollTop())
+			console.log($('.father').scrollLeft())
+			console.log($('.father').scrollTop(400))
+			console.log($('.father').scrollLeft(400))
+			console.log($('.father').scrollTop())
+			console.log($('.father').scrollLeft())
+		}
+		
+	})
+</script>
+</html>

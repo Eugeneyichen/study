@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>184-回车提交事件.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+		}
+		li{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #f67;
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<input type="text" id="txt">
+		<input type="button" id="btn" value="提交">
+		<ul id="list">
+			<!-- <li>xxx</li> -->
+		</ul>
+	</div>
+</body>
+<script>
+	var oTxt = document.getElementById('txt')
+	var oBtn = document.getElementById('btn')
+	var oList = document.getElementById('list')
+	oTxt.onkeydown = function(ev){
+		console.log(ev.ctrlKey)
+		if(ev.keyCode == 13 && ev.ctrlKey){
+			oBtn.onclick()
+		}
+	}
+
+	oBtn.onclick = function(){
+		var oLi = document.createElement('li');
+		oLi.innerHTML = oTxt.value;
+		oTxt.value = '';
+		oList.insertBefore(oLi,oList.firstChild)
+	}
+
+
+
+</script>
+</html>

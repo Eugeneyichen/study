@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#pic{
+			width: 55px;
+			height: 55px;
+			background-color: #ff6700;
+			overflow: hidden;
+			position: relative;
+
+			/*opacity: 0.6;*/
+		}
+		#img1{
+			float: left;
+			position: absolute;
+			left: 0px;
+			top: 0;
+			transition: all 0.3s;
+		}
+		#img2{
+			float: left;
+			position: absolute;
+			left: 0px;
+			top: 0;
+			transition: all 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<div id="pic">
+		<img src="image/2.png" alt="" id="img2">
+		<img src="image/1.png" alt="" id="img1">
+	</div>
+</body>
+<script>
+	var oPic = document.getElementById('pic')
+	var oImg1 = document.getElementById('img1')
+	var oImg2 = document.getElementById('img2')
+	oPic.onmouseenter = function(){
+		oImg1.style.left = '55px';
+		oImg2.style.left = '0px';
+		// oImg2.style.display = 'block';
+	}
+	oPic.onmouseleave = function(){
+		// oImg1.style.display = 'block';
+		oImg1.style.left = '0px';
+		oImg2.style.left = '-55px';
+	}
+</script>
+</html>

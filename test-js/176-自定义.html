@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>176-自定义.html</title>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var dom = document.getElementById('box')
+	var ev = new Event('test');
+	dom.addEventListener('test',function(){
+		console.log('aa');
+	})
+	dom.dispatchEvent(ev);
+</script>
+</html>

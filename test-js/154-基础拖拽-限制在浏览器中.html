@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>154-基础拖拽-限制在浏览器中.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 250px;
+			height: 250px;
+			background-color: #f67;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box')
+	var disX=0,dixY=0
+	var oBox = document.getElementById('box')
+	var disX=0,dixY=0
+	oBox.onmousedown = function(ev){
+		disX = ev.clientX-oBox.offsetLeft;
+		disY = ev.clientY-oBox.offsetTop;
+		console.log(disX,disY)
+		document.onmousemove = function(ev){
+		var l = ev.clientX - disX
+		var t = ev.clientY - disY
+		if(l<0){
+			l=0;
+		}else if(l>window.innerWidth-oBox.offsetWidth){
+			l=window.innerWidth-oBox.offsetWidth;
+		}
+
+		if(t < 0){
+			t = 0;
+		}else if(t > window.innerHeight - oBox.offsetHeight){
+			t = window.innerHeight - oBox.offsetHeight;
+		}
+
+		oBox.style.left = l + 'px';
+		oBox.style.top = t + 'px';
+	}
+	document.onmouseup = function(){
+		document.onmousemove = null;
+		document.onmousedown = null;
+	}
+	}
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>177-自定义.html</title>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box')
+	var ev = new Event('test')
+	oBox.addEventListener('test',function(){
+		console.log('bb');
+	})
+	oBox.dispatchEvent(ev);
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>188-无序唯一去除重复.html</title>
+</head>
+<script>
+	var arr = [11,22,33,44,55,44,66,77,66];
+	function unq(arr){
+		var result = [];
+		var obj = {};
+		for(var i = 0;i<arr.length;i++){
+			obj[arr[i]]=""
+		}
+		// console.log(obj)
+		for(var at in obj){
+			result.push(at)
+		}
+
+		return result;
+	}
+	console.log(unq(arr))
+</script>
+<body>
+	
+</body>
+</html>

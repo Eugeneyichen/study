@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>051-QQ邮箱</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			width: 1500px;
+			height: 66px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.link{
+			font-size: 14px;
+			color: #1d5994;
+			text-decoration: none;
+		}
+		.link:hover{
+			text-decoration: underline;
+		}
+		header{
+			height: 64px;
+			line-height: 64px;
+			background-color: #eff4fa;
+			border-bottom: 1px solid #d6dfea;
+		}
+		li{
+			list-style: none;
+		}
+		.logo{
+			float: left;
+		}
+		.logo a{
+			display: inline-block;
+			width: 185px;
+			height: 35px;
+			background-image: url(image/12.jpg);
+		}
+		.on1 a{
+			display: inline-block;
+			font-size: 20px;
+			text-decoration: none;
+			color: black;
+		}
+		.on1 a:hover{
+			color: #999999
+		}
+		nav{
+			float: right;
+		}
+		nav li{
+			float: left;
+			font-size: 12px;
+			color: #b6c1da;
+		}
+		section{
+			height: 680px;
+		}
+		.main{
+			height: 100%;
+			padding: 70px 315px 226px 205px;
+			box-sizing: border-box;
+		}
+		.left-area{
+			float: left;
+			width: 645px;
+			height: 392px;
+			background-image: url(image/13.jpg);
+		}
+		.right-area{
+			float: right;
+			border: 1px solid #9eb0c3;
+			width: 325px;
+			height: 392px;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+		.right-area .hd{
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			background-color: #f9fbfe;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border-bottom:1px solid ##9eb0c3;
+			text-align: center;
+		}
+		.right-area .hd a{
+			text-decoration: none;
+			font-size: 18px;
+			color:#a5a29c;
+		}
+		.right-area .hd a:first-child{
+			margin-right: 20px;
+		}
+		.right-area .hd a.active{
+			color:#222;
+		}
+		.right-area .bd{
+			padding: 32px 24px 0px 26px;
+		}
+		.from-box{
+			margin-bottom: 10px;
+		}
+		.from-box [type="text"],
+		.from-box [type="password"]{
+			width: 100%;
+			height: 38px;
+			padding-left: 12px;
+			border:1px solid #d6dfea;
+			color: #b1b1b1;
+			box-sizing: border-box;
+		}
+		.from-box [type="text"]:foucs,
+		.from-box [type="password"]:foucs{
+			border-color:#4892e7;
+		}
+		.check-item{
+			font-size: 12px;
+			height: 30px
+			line-height:30px;
+		}
+		.check-item input{
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+		.from-box [type="button"]{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			background-color: #4892e7;
+			color: #fff;
+			font-size: 16px;
+			letter-spacing: 10px;
+			outline: none;
+			cursor: pointer;
+		}
+		.from-box [type="button"]:hover{
+			opacity: 0.6;
+		}
+		.links{
+			margin-top: 120px;
+			margin-left: 55px;
+		}
+		.links li{
+			float: left;
+			font-size: 12px;
+			color: #b6c1da
+		}
+		footer{
+			height: 36px;
+			background-color: #d6dfea;
+			border-top: 1px solid #d6dfea;
+		}
+		footer .container{
+			text-align: center;
+			line-height: 36px;
+			font-size: 12px;
+			color: gray;
+
+		}
+	</style>
+</head>
+<body>
+	<header >
+		<div class="container">
+			<h1 class="logo">
+				<a href="#"></a>
+			</h1>
+			<nav>
+				<ul>
+					<li>
+						<a class="link" href="#">基本版</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					</li>
+					<li>
+						<a class="link" href="#">Enilish</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					</li>
+					<li>
+						<a class="link" href="#">手机版</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					</li>
+					<li>
+						<a class="link" href="#">企业邮箱</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<div class="container main ">
+			<div class="left-area"></div>
+			<div class="right-area">
+				<div class="hd">
+					<a href="javascript:;">快速登陆</a>
+					<a  class="active" href="javascript:;">账号密码登录</a>
+				</div>
+				<div class="bd">
+					<div class="from-box">
+						<input type="text" placeholder="支持QQ号\邮箱\手机号">
+					</div>
+					<div class="from-box">
+						<input type="password" placeholder="QQ密码"><br/>
+					</div>
+					<div class="from-box check-item">
+						<input type="checkbox" id="auto-login"><lable for="auto-login">下次自动登陆</lable><br/>
+					</div>
+					<div class="from-box">
+						<input type="button" value="登录">
+					</div>
+				
+					<div class="links">
+							<ul>
+								<li><a class="link" href="#">忘记密码？</a>|&nbsp;</li><li><a class="link" href="#">注册新账号</a>&nbsp;|&nbsp;</li><li><a class="link" href="#">意见反馈</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<a class="link" href="#">关于腾讯</a>&nbsp;|&nbsp;
+			<a class="link" href="#">服务条款</a>&nbsp;|&nbsp;
+			<a class="link" href="#">服务政策</a>&nbsp;|&nbsp;
+			<a class="link" href="#">客服中心</a>&nbsp;|&nbsp;
+			<a class="link" href="#">联系我们</a>&nbsp;|&nbsp;
+			<a class="link" href="#">帮助中心</a>&nbsp;|&nbsp;
+			©1998 - 2018 Tencent Inc. All Rights Reserved.
+		</div>
+	</footer>
+</body>
+</html>

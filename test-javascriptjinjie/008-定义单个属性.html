@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>008-定义单个属性.html</title>
+	<script>
+		function person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		person.prototype.showName = function(){
+			console.log('I am' + this.name);
+		}
+		person.prototype.showAge = function(){
+			console.log('I am' + this.age + 'years older');
+		}
+		person.prototype.LEGS = 2;
+
+		var p1 = new person('tom',18)
+		// p1.EYES = 2;
+		// console.log(p1) 
+		// for(var attr in p1){
+		// 	console.log(attr,p1[attr])
+		// }
+		Object.defineProperty(p1,'SEX',{
+			value:6,
+			enumerable:true,
+			writeable:true,
+			configurable:true,
+		});
+		Object.defineProperty(p1,'SEX',{
+			value:6,
+			enumerable:false,
+			writeable:true,
+		});
+		console.log(p1)
+		p1.SEX = 4;
+		for(var attr in p1){
+		 	console.log(attr,p1[attr])
+		 }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

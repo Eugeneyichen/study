@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>202-量词(限定前面原子出现的次数).html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">验证</button>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		// var wyc = /^[1|2]\d{3}$/;//合法年份(公元1000年至公元2999年):/^[1-2]\d{3}$/.test(str)
+		// var wyc = /^1[3578]\d{9}$/;//验证手机号:/^1[35789]\d{9}$/.test(str)
+		// var wyc = /^[a-zA-Z]\w{5,11}$/ //密码(以字母开头,长度在6~12之间,只能包含字母、数字和下划线)：/^[a-zA-Z]\w{5,11}$/.test(str)
+		if(wyc.test(oTxt.value)){
+			alert('合法')
+		}else{
+			alert('不合法')
+		}
+	}
+
+</script>
+</html>

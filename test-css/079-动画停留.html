@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>079-动画停留</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			margin: 50px auto;
+			animation:sport 1s linear 2s; 
+			animation-fill-mode: ;
+		}
+		@keyframes sport{
+			0%{
+				transform: rotate(10deg);
+			}
+			50%{
+				transform: rotate(35deg);
+			}
+			70%{
+				transform: rotate(70deg);
+			}
+			100%{
+				transform: rotate(80deg);
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>014-jq操作css.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: tomato;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		console.log($('div').css('width'))
+		console.log($('div').eq(1).css('width'))
+
+		// console.log($('div').css('width','300px'))
+		// console.log($('div').css('backgroundColor','red'))
+
+		// console.log($('div').css('width','300px').css('height','300px'))
+
+		console.log($('div').css({
+			width:'250px',
+			height:'250px',
+			backgroundColor:'skyblue'
+		}))
+	})
+</script>
+</html>

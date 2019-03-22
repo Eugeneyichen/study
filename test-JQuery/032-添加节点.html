@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>032-添加节点.html</title>
+</head>
+<body>
+	<button>tj1</button>
+	<button>tj2</button>
+	<button>tj3</button>
+	<button>tj4</button>
+	<button>tj5</button>
+	<button>tj6</button>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$('button').eq(0).on('click',function(){
+			var oLi = $('<li>我是新来的1</li>')
+			$('ul').append(oLi)
+		});
+		$('button').eq(1).on('click',function(){
+			var oLi = $('<li>我是新来的2</li>')
+			oLi.appendTo($('ul'))
+		});
+		$('button').eq(2).on('click',function(){
+			var oLi = $('<li>我是新来的3</li>')
+			$('ul').prepend(oLi)
+		});
+		$('button').eq(3).on('click',function(){
+			var oLi = $('<li>我是新来的4</li>')
+			oLi.prependTo($('ul'))
+		});
+		$('button').eq(4).on('click',function(){
+			var oP = $('<p>我是新来的5</p>')
+			$('ul').after(oP)
+		});
+		$('button').eq(5).on('click',function(){
+			var oP = $('<p>我是新来的6</p>')
+			$('ul').before(oP)
+		});
+	})
+</script>
+</html>

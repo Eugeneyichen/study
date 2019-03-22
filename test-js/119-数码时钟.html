@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>119-数码时钟.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: black;
+		}
+		#timer{
+			width: 600px;
+			height: 600px;
+			margin: 100px auto;
+			font-size: 60px;
+			text-align: center;
+			line-height: 300px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		<img src="image/1.png" alt="">
+		<img src="image/1.png" alt="">
+		:
+		<img src="image/1.png" alt="">
+		<img src="image/4.png" alt="">
+		:
+		<img src="image/3.png" alt="">
+		<img src="image/8.png" alt="">
+	</div>
+</body>
+<script>
+	var oTimer = document.getElementById('timer');
+	var aImg = oTimer.children;
+	function t02(num){
+		return num < 10 ? '0' + num : '' + num;
+	}
+	function shizhong(){
+		var today = new Date()
+		var iHour = today.getHours(),iMinute = today.getMinutes(),iSecond = today.getSeconds();
+		var oTime = t02(iHour) +  t02(iMinute) +  t02(iSecond);
+		for(var i=0;i<aImg.length;i++){
+			aImg[i].src="image/"+oTime.charAt(i)+".png"
+		}
+	}
+	setInterval(shizhong,1000)
+	shizhong()
+</script>
+</html>

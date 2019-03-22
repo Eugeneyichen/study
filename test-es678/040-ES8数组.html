@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>040-ES8数组.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var obj = {
+		0:'aa',
+		1:'bb',
+		length:2
+	}
+	console.log(obj)
+	//将伪数组转为真数组
+	let arr = Array.from(obj)
+	console.log(arr)
+
+	let arr1 = [11,22,33,44,55]
+	//用于找出第一个符合条件的数组成员
+	//参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。
+	console.log(arr1)
+	console.log(arr1.find(n=>n>21))//22
+	console.log(arr1.find(n=>n>31))//33
+	console.log(arr1.find(n=>n>56))//undefined
+
+	//用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
+	console.log(arr1.findIndex(n=>n>21))//1
+	console.log(arr1.findIndex(n=>n>44))//4
+	console.log(arr1.findIndex(n=>n>56))//-1
+
+	//作用:返回一个布尔值，表示某个数组是否包含给定的值
+	console.log(arr1.includes(44))//true
+	console.log(arr1.includes(55))//true
+	console.log(arr1.includes(56))//false
+
+
+
+
+
+
+</script>
+</html>

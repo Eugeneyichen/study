@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>022-promise处理ajax.html</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	
+	$.get('https://api.github.com/users/Eugeneyichen',data=>{
+		console.log(data)
+		$.get(data.followers_url,data2=>{
+			console.log(data2)
+			$.get(data2[0].followers_url,data3=>{
+				console.log(data3)
+			})
+		})
+	})
+	
+	// let getDataPromise = (url)=>{
+	// 	return new Promise((resolve,reject)=>{
+	// 		$.get(url,data=>{
+	// 			resolve(data)
+	// 		})
+	// 	})
+	// }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-函数防抖.html</title>
+	<style>
+		*{
+			width: 3000px;
+			height: 3000px;
+		}
+	</style>
+	<script>
+		var i = 0;
+		function debounce(fn,delay){
+			var timer = 0;
+			return function(){
+				clearTimeout(timer)
+				timer = setTimeout(fn,delay)
+			}
+		}
+		window.onscroll = debounce(function(){
+			console.log(i++);
+		},500)
+
+	// 	var i = 0;
+	// function debounce(fn,delay){
+	// 	var timer = 0;
+	// 	return function(){
+	// 		clearTimeout(timer)
+	// 		timer = setTimeout(fn,delay)
+	// 	}
+	// }
+	// window.onscroll = debounce(function(){
+	// 		console.log(i++)
+	// 	},500)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

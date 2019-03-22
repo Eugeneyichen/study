@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>name</title>
+	<script>
+		function person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		person.prototype.showName = function(){
+			console.log('I am' + this.name);
+		}
+		person.prototype.showAge = function(){
+			console.log('I am' + this.age + 'years older');
+		}
+		person.prototype.LEGS = 2;
+
+		function student(name,age,major){
+			this.name = name;
+			this.age = age;
+			this.major = major;
+		}
+		student.prototype.showName = function(){
+			console.log('I am' + this.name);
+		}
+		student.prototype.showAge = function(){
+			console.log('I am' + this.age + 'years older');
+		}
+		student.prototype.showAge = function(){
+			console.log('I am' + this.major + 'years older');
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

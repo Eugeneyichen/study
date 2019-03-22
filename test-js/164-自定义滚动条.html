@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>160-限制在父容器中.html</title>
+	<style>
+		#box{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			background-color: #f67;
+		}
+		#fat{
+			position: relative;
+			width: 50px;
+			height: 600px;
+			background-color: #ccc;
+			margin: 50px auto;
+		}
+		#btn{
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="fat">
+		<div id="box"></div>
+	</div>
+	<div id="btn"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box')
+	var oFat = document.getElementById('fat')
+	var oBtn = document.getElementById('btn')
+	var disX = 0,disY = 0;
+	oBox.onmousedown = function(ev){
+		disY = ev.clientY - oBox.offsetTop;
+		document.onmousemove = function(ev){
+			var t = ev.clientY - disY
+			if(t < 0){
+				t = 0;
+			}else if(t > oFat.offsetHeight - oBox.offsetHeight){
+				t = oFat.offsetHeight - oBox.offsetHeight;
+			}
+			var scale =t/( oFat.offsetHeight - oBox.offsetHeight)
+			oBox.style.top = t + 'px';
+			oBtn.style.width = 100 + 500 * scale + 'px'
+			oBtn.style.height = 100 + 500 * scale + 'px'
+			oBtn.style.opacity = 0 + 1 * scale
+		}
+	document.onmouseup = function(ev){
+		document.onmousemove = null;
+		document.onmousedown = null;
+	}
+	}
+</script>
+</html>

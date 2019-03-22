@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>207-量词.html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">发布</button>
+</body>
+<script>
+	var oTxt = document.getElementById('txt')
+	var oBtn = document.getElementById('btn')
+	oBtn.onclick = function(){
+		// var wyc = /^[1-2]\d{3}$/
+		var wyc = /^1[3578]\d{9}$/
+		// 密码(以字母开头,长度在6~12之间,只能包含字母、数字和下划线)
+		// var wyc = /^[a-z]\w{5,11}$/
+
+		if(wyc.test(oTxt.value)){
+			alert('合法')
+		}else{
+			alert('不合法')
+		}
+	}
+</script>
+</html>

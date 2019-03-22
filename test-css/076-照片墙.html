@@ -1,0 +1,88 @@
+image/<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>076-照片墙</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			height: 400px;
+			background-color: pink;
+			text-align: center;
+		}
+		ul li{
+			display: inline-block;
+			text-align: center;
+			margin-top: 100px;
+			width: 300px;
+			height: 200px;
+			border:5px solid aqua;
+			box-sizing: border-box;
+			position: relative;
+			transition:  all 2s;
+		}
+		ul li img{
+			width: 100%;
+			height: 100%;
+		}
+		ul li:nth-child(1){
+			transform: rotate(15deg);
+		}
+		ul li:nth-child(2){
+			transform: rotate(-15deg);
+		}
+		ul li:nth-child(3){
+			transform: rotate(15deg);
+		}
+		ul li:nth-child(4){
+			transform: rotate(0deg);
+		}
+		ul li:nth-child(5){
+			transform: rotate(-15deg);
+		}
+		body ul li:hover{
+			transform: rotate(0deg) scale(1.3,1.3);
+			z-index: 1;
+			opacity: 1;
+		}
+		ul:hover li{
+			opacity: 0.5;
+		}
+		span{
+			display: block;
+			font-size: 30px;
+			position: absolute;
+			left: 750px;
+
+		}
+		ul span:hover{
+			color: aqua;
+			transition: all 2s;
+			transform: scale(1.3,1.3);
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<span>朴智妍</span>
+		<li>
+			<img src="image/pjy6.png" alt="">
+		</li>
+		<li>
+			<img src="image/pjy7.png" alt="">
+		</li>
+		<li>
+			<img src="image/pjy3.jpg" alt="">
+		</li>
+		<li>
+			<img src="image/pjy9.png" alt="">
+		</li>
+		<li>
+			<img src="image/pjy8.png" alt="">
+		</li>
+	</ul>
+</body>
+</html>

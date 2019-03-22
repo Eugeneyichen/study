@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>062-递归凋零</title>
+	<script>
+		function fact(n){
+			if(n == 1){
+				return 1;
+			}
+			return n * arguments.callee(n-1)
+		}
+		// console.log(fact(7)) 
+		var fact2=fact
+		fact= 1
+		console.log(fact)
+		console.log(fact2)
+
+		console.log(fact2(5))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

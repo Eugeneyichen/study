@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 3000px;
+			position: relative;
+		}
+		#box{
+			height: 0px;
+			width: 100%;
+			background-color: #f67;
+			position: fixed;
+			top: 0px;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script src="util.js"></script>
+<script>
+	var oBox = document.getElementById('box');
+	window.onscroll = function(){
+		if(document.documentElement.scrollTop >= 300){
+			// oBox.style.height = 100 + 'px';
+			animate(oBox,{height:100},true);
+		}else if(document.documentElement.scrollTop < 300){
+			// oBox.style.height = 0 + 'px';
+			animate(oBox,{height:0},true);
+		}
+	}
+</script>
+</html>

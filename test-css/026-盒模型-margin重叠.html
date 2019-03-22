@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>026-盒模型-margin重叠.html</title>
+	<style>
+		
+		.box1{
+			background:yellow;
+			margin-bottom:60px;
+			width: 200px;
+			height: 200px;
+		}
+		.box2{
+			background: green;
+			margin-top: 60px;
+			width: 200px;
+			height: 200px;
+			margin-bottom:60px;
+		}
+		.box3{
+			background: pink;
+			margin-top: 60px;
+			width: 200px;
+			height: 200px;
+		}
+		.father{
+			overflow: hidden;
+		}
+		.father1{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="box1"></div>
+	</div>
+	<!-- <div class="father1"> -->
+		<div class="box2"></div>
+		<!-- </div> -->
+	<div class="father1">
+		<div class="box3"></div>
+	</div>
+</body>
+</html>

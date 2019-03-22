@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>117-date.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var td = new Date();
+	console.log(td);
+	console.log("getFullYear():",td.getFullYear())//返回指定日期对象的年份。
+	console.log("getMonth():",td.getMonth())//返回指定日期对象的月份，从0开始（0表示一年中的第一月）。
+	console.log("getDate():",td.getDate())//返回指定日期对象在月中的第几天
+	console.log("getHours():",td.getHours())//返回指定日期对象的小时。
+	console.log("getMinutes():",td.getMinutes())//返回指定日期对象的分钟数。
+	console.log("getSeconds():",td.getSeconds())//返回指定日期对象的秒数。
+	console.log("getMilliseconds():",td.getMilliseconds())//返回指定日期对象的毫秒数。
+	console.log("getTime():",td.getTime())//返回值一个数值，表示从1970-1-1 00:00:00  UTC (世界标准时间)距离该日期对象所代表时间的毫秒数。
+	console.log("Date.now():",Date.now())//方法返回自 1970-1-1 00:00:00  UTC (世界标准时间)至今所经过的毫秒数。
+	console.log("getDay():",td.getDay())// 返回指定日期对象在具体日期中一周的第几天，0 表示星期天。
+	console.log("toLocaleDateString():",td.toLocaleDateString())//返回指定日期对象的年月日字符串
+	console.log("toLocaleString():",td.toLocaleString())//返回指定日期对象的年月日和时间字符串
+	console.log("toLocaleTimeString():",td.toLocaleTimeString())//返回指定日期对象的时间字符串
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-jq静态方法.html</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	var arr1 = [1,2,6,9,8]
+	var oDiv = document.getElementsByTagName('div')
+	var oBtn = {0:'aaa',1:'bbb',length:2}
+	console.log(oBtn)
+
+	// arr1.forEach(function(item,index){
+	// 	console.log("1::",item,index)
+	// })
+	// $.each(arr1,function(index,item){
+	// 	console.log("2::",index,item)
+	// })
+	// $(oDiv).each(function(index,item){
+	// 	console.log("3::",index,item)
+	// })
+	// $(arr1).each(function(index,item){
+	// 	console.log("4::",index,item)
+	// })
+	$.each(oBtn,function(item,index){
+		console.log("5::",item,index)
+	})
+
+
+	// arr1.map(function(item,index){
+	// 	console.log("1::",item,index)
+	// })
+	// $.map(arr1,function(index,item){
+	// 	console.log("2::",index,item)
+	// })
+	// $(oDiv).map(function(index,item){
+	// 	console.log("3::",index,item)
+	// })
+	$.map(oBtn,function(item,index){
+		console.log("5::",item,index)
+	})
+</script>
+</html>

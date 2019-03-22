@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>033-元素自身居中</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			padding: 200px
+		}
+		.box{
+			border:1px solid #000;
+			width: 400px;
+			height: 400px;
+			background: yellow;
+			line-height: 400px;
+			margin:0 auto;
+			box-shadow: 20px 20px 10px 5px purple ;
+			/*border-top-left-radius: 50% 50%;*/
+			/*border-top-right-radius: 50% 50%;*/
+			/*border-bottom-right-radius: 50% 50%;*/
+			/*border-bottom-left-radius: 50% 50%;*/
+			border-radius: 30%;
+		}
+		img{
+			/*width: 200px;*/
+			/*height: 200px;*/
+			/*background: red;*/
+			/*margin:0 auto;*/
+			/*margin-top: 250px;*/
+			/*text-align: center;*/
+			/*line-height: 200px;*/
+			/*padding-top: 20px;*/
+			/*padding-bottom: 20px;*/
+			width: 130px;
+			height: 200px;
+			vertical-align: middle;
+
+		}
+	</style>
+</head>
+<body>
+	<!-- <div>我是div我是div我是div我是div我是div我是div我是div我是div我是div我是div</div> -->
+	<div class="box">
+		我是pzy
+		<img src="4.jpg" alt="">
+	</div>
+</body>
+</html>

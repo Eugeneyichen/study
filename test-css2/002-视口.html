@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-视口</title>
+	<!-- <meta name="viewport" content="width=400"> -->
+	<!--
+	把1080个物理像素转换为400个css像素 1080/400 = 2.7
+	-->
+	<!-- <meta name="viewport" content="width=375">  -->
+	<!--
+	把1080个物理像素转换为375个css像素 1080/375 = 2.88
+	-->
+	<meta name="viewport" content="width=device-width"> 
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*
+		1920*1080 5.5英寸
+		1600*900
+		*/
+		h1{
+			font-size: 24px;
+		}
+		p{
+			font-size: 18px;
+			width: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<h1>我是标签</h1>
+	<p>我是一大段文字</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>115-数码时钟</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: black;
+		}
+		#timer{
+			width: 600px;
+			height: 600px;
+			margin: 100px auto;
+			color: #fff;
+			text-align: center;
+			font-size: 60px;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		<img src="image/0.png" alt="">
+		<img src="image/0.png" alt="">
+		:
+		<img src="image/0.png" alt="">
+		<img src="image/0.png" alt="">
+		:
+		<img src="image/0.png" alt="">
+		<img src="image/0.png" alt="">
+	</div>
+</body>
+<script>
+	var oTimer = document.getElementById('timer')
+	var aImg = oTimer.children;
+	function t02(num){
+		if(num<10){
+			return "0" +num
+		}else{
+			return num
+		}
+	}
+	function xunhuan(){
+		var oTaday = new Date();
+		var iHours = oTaday.getHours(),iMinute = oTaday.getMinutes(),iSecond = oTaday.getSeconds();
+		var iTime = t02(iHours)+t02(iMinute)+t02(iSecond);
+		// oTimer.innerHTML = iTime;
+
+			for(var i=0;i<aImg.length;i++){
+				aImg[i].src = "image/"+iTime.charAt(i)+".png";
+			}
+	}
+
+	setInterval(xunhuan,1000)
+	xunhuan()
+</script>
+</html>

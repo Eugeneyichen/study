@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str1 = 'acbc 你好c 123';
+		console.log(str1.charAt(5));//str.charAt(index)根据位置返回字符位置在0和str.length-1之间,如果不在返回空字符,一个汉字是一个字节 
+		console.log(str1.charCodeAt(5));//str.charCodeAt(index)根据位置返回字符的编码,位置在0和str.length-1之间,如果不在返回空字符,一个汉字是一个字节, charCodeAt返回的是字符的Unicode码,Unicode码是统一的编码,Unicode码包含了ASCII码(0-127)
+		console.log(str1.indexOf('c'));//str.indexOf(str1)根据字符返回位置,从前向后找,找不到返回-1
+		console.log(str1.lastIndexOf('3'));//str.lastIndexOf(str1)根据字符返回位置,从后向前找,找不到返回-1
+		var str2 = '123654https://www.kuazhu.com/';
+		console.log(encodeURIComponent(str2));//encodeURIComponent(str),URI 编码,编码除了字母、数字、(、)、.、!、~、*、'、-和_之外的所有字符
+		var str3 = '123654https%3A%2F%2Fwww.kuazhu.com%2F';
+		console.log(decodeURIComponent(str3));//URI 解码
+
+		var str4 = 'defHIJ 456';
+		console.log(str1.concat(str4));//str1.concat(str2) 连接字符串
+		console.log(str4.slice(1,-4))//str.slice(起始下标,结束下标) 截取字符串,下标可以是负数,负数表示从尾部开始计算,包括起始下标但不包括结束下标
+		console.log(str4.substr(-6,5));//str.substr(起始下标,长度),截取字符串,下标可以是负数,负数表示从尾部开始计算
+		console.log(str4.substring(1,6));//str.substring(起始下标,结束下标),截取字符串,下标不可以是负数
+		console.log(str4.toLowerCase());//str.toLowerCase(),把字符串转换为小写
+		console.log(str4.toUpperCase());//str.toUpperCase() ,把字符串转换为大写
+
+		var str5 = ' 	ivjf 2464 		';
+		console.log(str5);
+		console.log(str5.trim());
+
+
+/*
+
+	
+str.trim()
+	去除字符串两边的空白
+	*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>034-async函数的await.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*
+	//await只能放到async函数体中
+	function fn(){
+		await 'hello';//await is only valid in async function
+	}
+	*/
+	async function fn(){
+		let wyc = await '许昌易烊千玺'
+		console.log(wyc)
+	}
+	fn();
+</script>
+</html>

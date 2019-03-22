@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>063-全局变量</title>
+	<script>
+		// var a = 1
+		// function wyc(){
+		// 	console.log(a);//undefined
+		// 	 var a = 2
+		// 	function wyc1(){
+		// 		console.log(a)//2
+		// 	}
+		// 	wyc1()
+		// }
+		// console.log("globa1",a)//1
+		// wyc()
+		// console.log("globa2",a)//1
+
+
+		var a = 1
+		function wyc(){
+			console.log(a);//1
+			var a = 2
+			function wyc1(){
+				console.log(a)//2
+			}
+			wyc1()
+		}
+		console.log("globa1",a)//1
+		wyc()
+		console.log("globa2",a)//2
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

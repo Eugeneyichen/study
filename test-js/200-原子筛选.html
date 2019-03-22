@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>200-原子筛选.html</title>
+	<script>
+		var str = '今天责骂1s1sab';
+		var rdg = /a|b/g;
+		var rdg2 = /[a-z]/g;
+		console.log(str);
+		console.log(str.replace(rdg,'*'));
+		console.log(str.replace(rdg2,'*'));
+		function wenzi(strr){
+			return strr.replace(/[\u4e00-\u9fa5]/g,'cc').length
+		}
+		console.log(wenzi(str));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

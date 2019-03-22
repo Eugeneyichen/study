@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>135-动画基础正向反向合并移动.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			top: 50px;
+			left: 800px;
+			width: 100px;
+			height: 100px;
+			background-color: #f67;
+		}
+		.arr{
+			position: absolute;
+			top:50px;
+			left: 400px;
+			width: 2px;
+			height: 600px;
+			background-color: aqua;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">快点我</button>
+	<div id="box"></div>
+	<div class="arr"></div>
+</body>
+<script>
+	var oBtn = document.getElementById('btn')
+	var oBox = document.getElementById('box')
+	var timer = 0
+
+	oBtn.onclick = function(){
+		clearInterval(timer)
+		var iSpeed = 0
+		timer = setInterval(function(){
+			if(oBox.offsetLeft > 400){
+				iSpeed = -10
+			}else{
+				iSpeed = 10
+			}
+			if(oBox.offsetLeft == 400 ){
+				clearInterval(timer)
+			}else{
+				oBox.style.left = oBox.offsetLeft - 10 + 'px'
+			}
+		},30)
+	}
+
+</script>
+</html>

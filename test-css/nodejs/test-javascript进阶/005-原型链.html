@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-原型链.html</title>
+	<script>
+	function person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		person.prototype.showName = function(){
+			console.log('I am' + this.name)
+		}
+		person.prototype.showAge = function(){
+			console.log('I am' + this.age)
+		}
+		var yuiy = new person(name);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

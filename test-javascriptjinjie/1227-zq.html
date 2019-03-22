@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1227-zq.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.fah{
+			width: 500px;
+			height: 500px;
+			border: 1px solid pink;
+			margin: 50px auto;
+			position: relative;
+
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background: tomato;
+			position: absolute;
+			animation: sport 3s linear infinite;
+			
+		}
+		@keyframes sport{
+			0%{
+				left: 0px;
+				top: 0px;
+			}
+			25%{
+				left: 400px;
+				top: 0px;
+			}
+			50%{
+				left: 400px;
+				top: 400px;
+			}
+			75%{
+				left: 0px;
+				top: 400px;
+			}
+			100%{
+				left: 0px;
+				top: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="fah">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

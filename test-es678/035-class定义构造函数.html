@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>035-class定义构造函数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//class 定义的构造函数 不存在声明的提升
+	class Person{
+		constructor(name,age){//实例方法
+			this.name = name;
+			this.age = age;
+		}
+		sayName(){
+			console.log("I am"+this.name);
+		}
+		sayAge(){
+			console.log("I am"+this.age+"years old");
+		}
+		static sayHi(){//静态方法
+			console.log('hi...')
+		}
+
+	}
+
+	let p = new Person("Tom",18);
+	console.log(p);
+	p.sayName();
+	p.sayAge()
+	Person.sayHi();
+
+
+
+</script>
+</html>

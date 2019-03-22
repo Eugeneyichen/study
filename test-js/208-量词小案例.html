@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>208-量词小案例</title>
+</head>
+<body>
+	<textarea id="txt" cols="30" rows="10"></textarea>
+	<button id="btn">发布</button>
+</body>
+<script>
+	// var oTxt = document.getElementById('txt');
+	// var oBtn = document.getElementById('btn');
+	// oBtn.onclick = function(){
+	// 	// var sdf = /^[1-2]\d{3}$/  //合法年份
+	// 	// var sdf = /^1[3,5,7,8]\d{9}$///手机号
+	// 	var sdf = /^[a-z]\w{5,11}$/
+	// 	if(sdf.test(oTxt.value)){
+	// 		alert('合法')
+	// 	}else{
+	// 		alert('不合法')
+	// 	}
+	// }
+
+	var red = 'this is a fish,this is a fish';
+	var rdg = /\bis\b/g;
+	var rdg2 = /\Bis\B/g;
+	console.log(red.replace(rdg,'*'))
+	console.log(red.replace(rdg2,'*'))
+
+
+
+</script>
+</html>

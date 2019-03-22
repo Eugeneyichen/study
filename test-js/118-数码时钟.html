@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>118-数码时钟.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: black;
+		}
+		#timer{
+			margin:100px auto;
+			width: 600px;
+			height: 600px;
+			line-height: 300px;
+			text-align: center;
+			font-size: 60px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer"></div>
+</body>
+<script>
+	var oTimer = document.getElementById('timer')
+	function to2(num){
+		return num < 10 ? '0' + num : '' + num;
+	}
+	function shizhong(){
+		var today = new Date();
+		var iHour = today.getHours(),iMinute = today.getMinutes(),iSecond = today.getSeconds();
+		var iTime = iHour+":"+iMinute+":"+iSecond;
+		oTimer.innerHTML = iTime;
+	}
+	setInterval(shizhong,1000)
+	shizhong()
+</script>
+</html>

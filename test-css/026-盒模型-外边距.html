@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>026-盒模型-外边距.html</title>
+	<style>
+		.father{
+			border:1px solid black;
+		}
+		.father div{
+			width: 100px;
+			height:100px;
+			/*display: inline-block;*/
+			/*vertical-align: bottom;*/
+		}
+		.son1{
+			background: pink;
+		}
+		.son2{
+			background: yellow;
+			margin: -20px ;
+		}
+		.son3{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son3"></div>
+	</div>
+</body>
+</html>

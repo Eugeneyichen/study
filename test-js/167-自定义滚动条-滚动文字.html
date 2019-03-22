@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>167-自定义滚动条-滚动文字.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 500px;
+			margin:100px auto;
+			position: relative;
+		}
+		#fat{
+			width: 30px;
+			height: 322px;
+			background-color: purple;
+			position: absolute;
+			top: 0;
+			left: 402px;
+		}
+		#son{
+			width: 30px;
+			height: 30px;
+			background: yellow;
+			position: absolute;
+		}
+		#content{
+			width: 400px;
+			height: 320px;
+			line-height: 20px;
+			border: 1px solid #000;
+			position: relative;
+			overflow: hidden;
+		}
+		#txt{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="fat">
+			<div id="son"></div>
+		</div>	
+		<div id="content">
+			<div id="txt">
+				T-ara（티아라）是由李居丽（Qri）、咸恩静（ Eun Jung）、朴孝敏（Hyo Min）、朴智妍（Ji Yeon）、朴昭妍（So yeon）、全宝蓝（Bo Ram）组成的韩国女子流行演唱组合。 [1]  名称T-ara源自英文“Tiara”，指想成为歌谣界的“女王”。而她们也在其后获得了歌谣界的变色龙、神曲制造者、中国电竞女团等称誉。
+				2009年7月29日，T-ara以6人组合正式出道 [2]  ；11月27日发布首张韩语正规专辑《Absolute First Album》 [3-4]  。2011年9月28日，T-ara推出日语单曲《Bo Peep Bo Peep》在日本正式出道 [5-6]  。2012年6月6日，T-ara发行首张日语正规专辑《Jewelry Box》。2013年8月7日，T-ara发布第二张日语正规专辑《Treasure Box》 [7]  。
+				2014年5月14日，T-ara发布第三张日语正规专辑《Gossip Girls》；9月5日MBK Entertainment与广州龙桢文化发展有限公司签约，T-ara正式进军中国市场 [8]  ；11月24日T-ara发行翻唱自筷子兄弟的《小苹果》韩版《Little Apple》 [9]  ；12月25日T-ara举行出道以来首场韩国本土演唱会 [10]  ；同年12月27日在上海国际体操中心举办演唱会。2015年8月4日，推出第十一张韩语迷你专辑《So Good》 [11-12]  。2016年11月9日，T-ara推出第十二张迷你专辑《REMEMBER》。 [13]  2017年，T-ara以四人形式推出第十三张韩语迷你专辑《What's my name?》回归歌谣界 [14]  。
+				2018年1月3日，T-ara与出道10年的经纪公司MBK娱乐合同期满解约但组合全员不解散。 [1] 
+				2014年1月19日，T-ara在中国成都举办演唱会 [59]  ；2月21日，作曲家赵英秀与T-ara共同合作的歌曲《First Love》公开 [60]  ；3月5日，第九张日文单曲《Lead the Way/LA'booN》公开，带来两支风格完全不同的日文原创乐曲，双主打之一《Lead the way》为旋律优美的中板抒情曲。另外一首主打《LA’booN》则是旋律中毒的舞曲；5月14日，T-ara在日本第三弹原创专辑《Gossip Girls》在EMI Music Japan发售，这张专辑收入的歌曲以动感的旋律贯穿其中，以及副歌部分强烈的中毒性获得了歌迷和粉丝的喜爱。这张专辑与上一张专辑“Treasure Box”相距约9个月。收录第8张单曲“NUMBER NINE (Japanese ver.) / 记忆 ～君がくれた道标(みちしるべ)～”至第9张单曲“Lead the way / LA’booN”，共5曲；5月20日，朴智妍发行首张个人专辑《Never Ever》 [61]  ；6月30日，朴孝敏首张迷你专辑《Make up》发行 [62-63]  ；9月10日，T-ara第十张迷你专辑主打《Sugar Free》MV公开 [64-65]  ；9月26日，T-ara以相当于50亿韩元等额签约中国经纪公司龙桢文化，进军中国 [8]  市场 [66]  ；10月13日，T-ara在京举办大中华区签约发布会，此次T-ara签约中国经纪公司，正式进军中国。11月24日，T-ara发行翻唱筷子兄弟的《小苹果》，韩版《Little Apple》 [9]  [67]  ；12月25日，T-ara举行出道以来首场韩国本土演唱会 [10]  ；12月27日，在上海国际体操中心举办演唱会。
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var oFat = document.getElementById('fat')
+	var oSon = document.getElementById('son')
+	var oBox = document.getElementById('box')
+	var oTxt = document.getElementById('txt')
+	var oContent = document.getElementById('content')
+ 	var disY = 0,t = 0;
+	oSon.onmousedown = function(ev){
+		disY = ev.clientY - oSon.offsetTop;
+		document.onmousemove =  function(ev){
+			t = ev.clientY - disY
+			hand()
+		}	
+		oBox.onmousewheel = function(ev){
+			console.log(ev.wheelDelta);
+			if(ev.wheelDelta > 0){
+				t -= 10;
+			}else{
+				t += 10
+			}
+			hand()
+		}
+		function hand(){
+			if(t < 0){
+				t = 0;
+			}else if(t > oFat.offsetHeight - oSon.offsetHeight){
+				t = oFat.offsetHeight - oSon.offsetHeight;
+			}
+			var scale = t /(oFat.offsetHeight - oSon.offsetHeight)
+			oSon.style.top = t + 'px'
+			oTxt.style.top = -(oTxt.offsetHeight - oContent.offsetHeight) * scale + 'px'
+		}
+	}
+		document.onmouseup = function(ev){
+			document.onmousemove = null
+			document.onmousedown = null
+		} 
+</script>
+</html>

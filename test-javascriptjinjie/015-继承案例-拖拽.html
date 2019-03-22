@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>015-继承案例-拖拽.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function Drag(options){
+		//1.罗列
+		this.oBox = null;
+		this.width = options.width;
+		this.height = options.height;
+		this.background = options.background;
+		//2.初始化
+		this.init();
+		//3.绑定事件
+		this.bindEvent();
+	}
+	Drag.prototype.init = function(){
+		this.oBox = document.createElement('div');
+		this.oBox.style.position = 'absolute';
+		this.oBox.style.left = 0;
+		this.oBox.style.right = 0;
+		this.oBox.style.width = this.width + 'px';
+		this.oBox.style.height = this.height + 'px';
+		this.oBox.style.background = this.background;
+		document.body.appendChild(this.oBox);
+	}
+	Drag.prototype.bindEvent = function(){
+		this.oBox.onmousedown = function(ev){
+			// console.log(this)
+			var oEvent = ev || event;
+			this.disX = oEvent.clientX - this.oBox.offsetLeft;
+			this.disY = oEvent.clientY - this.oBox.offsetTop;
+
+			document.onmousemove = this.fnMove.bind(this);
+			document.onmouseup = this.fnUp;
+		}.bind(this);
+	}
+	Drag.prototype.fnMove = function(ev){
+		var oEvent = ev || event;
+		this.oBox.style.left = oEvent.clientX - this.disX + 'px';
+		this.oBox.style.top = oEvent.clientY - this.disY + 'px';
+	}
+	Drag.prototype.fnUp = function(){
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+ 	new Drag({
+		width:100,
+		height:100,
+		background:'yellow',
+	});
+	new Drag({
+		width:200,
+		height:200,
+		background:'green',
+	});
+</script>
+</html>

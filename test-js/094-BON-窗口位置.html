@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	094-BON-窗口位置</title>
+</head>
+<body>
+	
+</body>
+<script>
+	console.log("window.screenLeft",window.screenLeft);
+	console.log("window.screenTop",window.screenTop);
+
+	console.log("window.screenX",window.screenX);
+	console.log("window.screenY",window.screenY);
+
+	var iTop = 0;
+
+	// if(window.screenTop){
+	// 	iTop = window.screenTop;
+	// }else{
+	// 	iTop = window.screenY;
+	// }
+	// console.log(iTop)
+
+	// var iLeft = 0;
+
+	// if(window.screenLeft){
+	// 	iLeft = window.screenLeft;
+	// }else{
+	// 	iLeft = window.screenX;
+	// }
+	window.screenLeft ? iLeft = window.screenLeft :iLeft = window.screenX;//三目
+	iLeft = window.screenTop || window.screenY//逻辑或运算
+	console.log(iLeft)
+</script>
+</html>

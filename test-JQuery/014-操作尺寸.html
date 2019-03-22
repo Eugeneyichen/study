@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			padding: 10px;
+			border: 10px solid #ff6700;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			padding: 20px;
+			border: 20px solid #f67;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		// console.log($('div').width())
+		// console.log($('div').height())
+
+		// console.log($('div').width(150))
+		// console.log($('div').height(150))
+
+		console.log($('div').innerWidth())
+		console.log($('div').innerHeight())
+		// console.log($('div').innerWidth(150))
+		// console.log($('div').innerHeight(150))
+
+		// console.log($('div').outerWidth(150))
+		// console.log($('div').outerHeight(150))
+		// console.log($('div').outerWidth())
+		// console.log($('div').outerHeight())
+	})
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>023-Promise-resolve.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let  p1 = Promise.resolve();
+	console.log(p1)
+
+	let p2 = Promise.resolve(p1);
+	console.log(p2)
+
+	console.log(p1===p2)
+</script>
+</html>

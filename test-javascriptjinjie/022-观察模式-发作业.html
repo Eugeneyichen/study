@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0022-观察模式-发作业.html</title>
+	<script>
+		(function(w){
+			function Teacher(name){
+				this.name = name;
+				this.Students = [];
+			}
+			Teacher.prototype = {
+				constructor:Teacher,
+				register:function(student){
+					this.Students.push(student);
+				},
+				publish:function(task){
+					for(var i = 0;i<this.Students.length;i++){
+						this.Students[i].listen(task)
+					}
+				}
+			}
+			w.Teacher = Teacher;
+		})(window);
+
+		(function(w){
+			function Student(name,teacher){
+				this.name = name;
+				// teacher.Students.push(this)
+				teacher.register(this)
+			}
+			Student.prototype = {
+				constructor:Student,
+				listen:function(task){
+					console.log(this.name +'jkhf'+ task)
+				}
+			}
+			w.Student = Student;
+		})(window);
+
+		var t1 = new Teacher('Leon');
+		
+		var s1 = new Student('luna',t1);
+		var s2 = new Student('Iu',t1);
+
+		t1.publish('coding...');
+		// console.log(t1)
+		// console.log(s1)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-Promise的使用.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let promise = new Promise((resolve,reject)=>{
+		resolve('zenme')
+		// reject('jintian')
+
+	})
+	promise
+	.then((data) =>{
+		console.log(data)
+	},(err) =>{
+		console.log(err)
+	})
+</script>
+</html>

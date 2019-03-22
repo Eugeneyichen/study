@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>050-布局小练习</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+				width: 960px;
+				margin-left: auto;
+				margin-right: auto;
+		}
+		.clearfix:after{
+			display: block;
+			clear: both;
+			content: "";
+			visibility: hidden;
+			height: 0;
+		}
+		.clearfix{
+			*zoom:1;
+		}
+		.logo{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background-color: tomato;
+		}
+		.user-info{
+			float: right;
+			width: 200px;
+			height: 50px;
+			background-color: gray;
+		}
+		nav{
+			float: right;
+			width: 800px;
+			height: 50px;
+			background-color: purple;
+		}
+		.left{
+			float: left;
+			width: 790px;
+			height: 600px;
+			margin-bottom: 10px;
+		}
+		.right{
+			float: right;
+			width: 150px;
+			height: 600px;
+			background-color: skyblue;
+		}
+		.left-left{
+			float: left;
+			width: 620px;
+			height: 560px;
+			/*background-color: yellow;*/
+			margin-bottom: 10px;
+		}
+		.left-left-up{
+			width: 620px;
+			height: 320px;
+			margin-bottom: 10px;
+			background-color: yellow;
+		}
+		.left-left-down{
+			width: 620px;
+			height: 230px;
+			background-color: yellow;
+		}
+		.left-right{
+			float: right;
+			width: 150px;
+			height: 560px;
+			background-color: pink;
+			margin-left: 20px;
+		}
+		.left-below{
+			float: left;
+			width: 790px;
+			height: 30px;
+			background-color: tomato;
+		}
+		header{
+			margin-bottom: 10px;
+		}
+		section{
+			/*height: 600px;*/
+			/*background-color: purple;*/
+		}
+		footer{
+			height: 50px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<header class="container clearfix">
+		<h1 class="logo"></h1>
+		<div class="user-info"></div>
+		<nav></nav>
+	</header>
+	<section class="container clearfix">
+		<div class="left">
+			<div class="left-left">
+				<div class="left-left-up"></div>
+				<div class="left-left-down"></div>
+			</div>
+			<div class="left-right"></div>
+			<div class="left-below"></div>
+		</div>
+		<div class="right"></div>
+	</section>
+	<footer class="container"></footer>
+</body>
+</html>

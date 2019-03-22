@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>219-exec方法.html</title>
+	<script>
+		var str = 'a2018-12-21b2018-12-22';
+		var edg1 = /\d{4}-\d{2}-\d{2}/g;
+		var edg2 = /(\d{4})-(\d{2})-(\d{2})/g;
+		var edg3 = /(?<years>\d{4})-(?<mouth>\d{2})-(?<day>\d{2})/g;
+		console.log(str);
+		
+		// console.log(edg1.lastIndex);
+		// console.log(edg1.exec(str));
+		// console.log(edg1.lastIndex);
+		// console.log(edg1.exec(str));
+		// console.log(edg1.lastIndex);
+
+		console.log(edg2.lastIndex);
+		console.log(edg2.exec(str));
+		console.log(edg2.lastIndex);
+		console.log(edg2.exec(str));
+		console.log(edg2.lastIndex);
+
+		// console.log(edg3.lastIndex);
+		// console.log(edg3.exec(str));
+		// console.log(edg3.lastIndex);
+		// console.log(edg3.exec(str));
+		// console.log(edg3.lastIndex);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

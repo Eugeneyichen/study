@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>180-Json和js的区别.html</title>
+	<script>
+		var jn = '{"name":"wyc","age":18}'
+		var js = {
+			name :"wyc",
+			age:18
+		}
+		var jn2js = JSON.parse(jn)
+		var js2jn = JSON.stringify(js)
+
+		console.log(jn)
+		console.log(js)
+		console.log(typeof jn2js)
+		console.log(typeof js2jn)
+
+
+		//构造函数
+		//Array 构造函数 类
+		//arr/arr1 对象实例
+		var arr = new Array(11,22,3,5,4,1);
+		var arr1 = new Array();
+		//sort()实例方法
+		arr.sort(function(n1,n2){return n1 - n2});
+		console.log(arr);
+		//Math.floor()静态方法
+		console.log(Math.floor(1.3))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

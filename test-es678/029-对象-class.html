@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-对象-class</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function person(name,age){
+		this.name = name;
+		this.age = age
+	}
+	person.prototype.sayName = function(){
+		console.log('I am '+this.name)
+	}
+	person.prototype.sayAge = function(){
+		console.log('I am '+this.age+' years old')
+	}
+	person.sayHi = function(){
+		console.log('hi......')
+	}
+
+	let a = new person('wyc',18);
+	a.sayName();
+	a.sayAge();
+	person.sayHi();
+</script>
+</html>

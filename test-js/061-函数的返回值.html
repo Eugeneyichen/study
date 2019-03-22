@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>061-函数的返回值</title>
+	<script>
+		// function sum(){
+		// 	var result = 0;
+
+		// 	for(var i=0;i<arguments.length;i++){
+		// 		result=result+arguments[i]
+		// 	}
+		// 	alert(result)
+		// }
+		// sum(5,5)
+
+		function sum(){
+			var result = 0;
+			
+			for(var i=0;i<arguments.length;i++){
+				result=result+arguments[i]
+			}
+			// alert(result)
+			return result;
+		}
+
+		// var result = sum(5,5,5)
+		// alert(result)
+		alert(sum(5,5,5,5))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

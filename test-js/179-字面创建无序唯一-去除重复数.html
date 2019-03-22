@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>179-字面创建无序唯一-去除重复数.html</title>
+	<script>
+		var arr = [0,11,22,33,44,11,22,55,66,77,88,99,99,100];
+		function un(arr){
+			var result = [];
+			var obj = []
+			for(var i = 0;i<arr.length;i++){
+				obj[arr[i]] = ''
+			}
+			for(var attr in obj){
+				result.push(attr)
+			}
+			return result;
+		}
+		console.log(un(arr))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

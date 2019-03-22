@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>057-ym</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			margin: 0 auto;
+			list-style:none;
+		}
+		.zg{
+			position: fixed;
+			top: 0;
+			left: 338px;
+			z-index: 5;
+		}
+		.bj{
+			text-align: center;
+			position: relative;
+			top:4px;
+		}
+		.kt{
+			width: 900px;
+			height: 30px;
+			line-height: 30px;
+			background-color: rgb(128,128,128);
+		}
+		.kt-area li{
+			display: inline-block;
+		}
+		.kt-area-in{
+			padding-right: 61px;
+			padding-left: 61px;
+		}
+		.in1{
+			background-color:rgb(255,25,23);
+		}
+		.zj{
+			width: 700px;
+			height: 404px;
+			border: 1px solid #000;
+			margin-top: 20px;
+			background-repeat: no-repeat;
+			background-image: url(image/17.png);
+			position: absolute;
+			left: 425px;
+			top: 75px;
+		}
+		.zj-fk div{
+			width: 30px;
+			height: 60px;
+			background-color: rgb(169,160,146);
+			text-align: center;
+			padding-top: 15px;
+			font-size: 20px;
+			color: white;
+			box-sizing: border-box;
+		}
+		.zj-fk1{
+			position: absolute;
+			bottom: 140px;
+			/*right: :20px;*/
+		}
+		.zj-fk2{
+			position: absolute;
+			right:  0;
+			bottom: 140px;
+
+		}
+		.zj-yq li{
+			list-style:none;
+			display:inline-block;
+			position: relative;
+			top: 360px;
+			left: 530px;
+
+		}
+		.zj-yq-in{
+
+			width: 20px;
+			height: 20px;
+			border: 1px solid #000;
+			background-color: rgb(173,160,161);
+			border-radius: 50%;
+			text-align: center;
+			font-size: 12px;
+			color: white;
+			margin: 5px;
+			box-sizing: border-box;
+		}
+		.db{
+			width: 900px;
+			height: 2000px;
+			background-color: rgb(43,64,240);
+			margin-top: 60px;
+			position: absolute;
+			top: 500px;
+			left: 338px;
+		}
+		.right{
+			width: 100px;
+			height: 200px;
+			background-color: rgb(245,70,48);
+			position: fixed;
+			right: 0;
+			top: 200px;
+		}
+		.left{
+			width: 100px;
+			height: 200px;
+			background-color: rgb(245,70,48);
+			position: fixed;
+			left:  0;
+			top: 200px;
+		}
+		.db-fk{
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			box-sizing: border-box;
+			background-color: rgb(153,153,153);
+			padding-top: 40px;
+
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="zg">
+		<div  class="bj">
+			<img src="image/15.jpg" alt="">
+		</div>
+	    <div class="kt container">
+	    	<ul class="kt-area">
+	    		<li><div class="kt-area-in">天猫会员</div></li>
+	    		<li><div class="kt-area-in">品牌街</div></li>
+	    		<li><div class="kt-area-in in1">电器城</div></li>
+	    		<li><div class="kt-area-in">营业厅</div></li>
+	    		<li><div class="kt-area-in">魅力惠</div></li>
+	    	</ul>
+	    </div>
+    </div>
+	<div class="zj container clearfix">
+		<div class="zj-fk">
+			<div class="zj-fk1">&lt;</div>
+			<div class="zj-fk2">&gt;</div>
+		</div>
+		<div class="zj-yq">
+			<ul>
+				<li><div class="zj-yq-in">1</div></li>
+				<li><div class="zj-yq-in">2</div></li>
+				<li><div class="zj-yq-in">3</div></li>
+				<li><div class="zj-yq-in">4</div></li>
+				<li><div class="zj-yq-in">5</div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right"></div>
+	<div class="left"></div>
+	<div class="db container"> 我是内容</div>
+	<div class="db-fk"><a href="#">返回顶部</a></div>
+</body>
+</html>

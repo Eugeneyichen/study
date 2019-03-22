@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5-js免登陆提示</title>
+	<style>
+		input{
+			margin-left: 200PX;
+		}
+		div{
+			height: 50px;
+			width: 100px;
+			background: gray;
+			margin-left: 200px;
+			/*display: none;*/
+		}
+		/*input:hover+div{
+			display: none;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <input type="radio" onmouseover="box.style.display='block'" onmouseout="box.style.display='none'">免登陆 -->
+	<input type="radio" onmouseover="document.getElementById('box').style.background='yellow'" onmouseout="document.getElementById('box').style.background='pink'">免登陆
+	<div id="box">为了您的安全</div>
+</body>
+</html>

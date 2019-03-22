@@ -1,0 +1,46 @@
+image/<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>065-手风琴</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 1000px;
+			height: 400px;
+			background-color: pink;
+			border:1px solid #000;
+			margin: 50px auto;
+			list-style: none;
+		}
+		ul li{
+			float: left;
+			width: 200px;
+			height: 400px;
+			overflow: hidden;
+			transition: width 1s linear;
+		}
+		ul li img{
+			height: 100%;
+		}
+		ul:hover li{
+			width: 100px;
+		}
+		ul li:hover{
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="image/pjy2.jpg" alt=""></li>
+		<li><img src="image/pjy3.jpg" alt=""></li>
+		<li><img src="image/pjy4.jpg" alt=""></li>
+		<li><img src="image/pjy5.jpg" alt=""></li>
+		<li><img src="image/pjy6.jpg" alt=""></li>
+	</ul>
+</body>
+</html>

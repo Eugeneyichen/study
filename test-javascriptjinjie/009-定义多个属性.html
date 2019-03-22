@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>009-定义多个属性.html</title>
+	<script>
+		function person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		person.prototype.showName = function(){
+			console.log('I am' + this.name);
+		}
+		person.prototype.showAge = function(){
+			console.log('I am' + this.age + 'years older');
+		}
+		person.prototype.LEGS = 2;
+
+		var p1 = new person('tom',18)
+
+		Object.defineProperties(p1,{
+			SEXY:{
+				value:2,
+				enumerable:true
+			},
+			LovE:{
+				value:5,
+				enumerable:true
+			}
+		})
+		console.log(p1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

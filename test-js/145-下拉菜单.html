@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>145-下拉菜单.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#main{
+			width: 100px;
+			height: 600px;
+			background-color:#f67;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">菜单</button>
+	<div id="main"></div>
+</body>
+<script>
+	var oBtn = document.getElementById('btn')
+	var oMain = document.getElementById('main')
+
+	oBtn.addEventListener('click',function(ev){
+		oMain.style.display = 'block'
+		ev.stopPropagation()
+	},false)
+	oMain.addEventListener('click',function(ev){
+		oMain.style.display = 'block'
+		ev.stopPropagation()
+	},false)
+	document.addEventListener('click',function(){
+		oMain.style.display = 'none'
+	},false)
+
+
+
+</script>
+</html>

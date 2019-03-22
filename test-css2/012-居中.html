@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>012-居中.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 1000px;
+			height: 600px;
+			border:1px solid #f67;
+			margin: 50px auto;
+			display: flex;
+			/*flex-direction: column;*/
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: #f67;
+			border: 1px solid yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+		<div class="son"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			margin-left: auto;
+			margin-right: auto;
+			width: 960px;
+			box-sizing: border-box;
+		}
+		.clearfix:after{
+			display: block;
+			clear: both;
+			content: "";
+			visibility: hidden;
+			height: 0;
+		}
+		.clearfix{
+			*zoom:1;
+		}
+		header{
+			height: 100px;
+			margin-bottom: 10px;
+			/*background-color: gray;*/
+			overflow: hidden;
+		}
+		.top-left{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background-color: tomato;
+		}
+		.top-left-right{
+			float: right;
+			width: 200px;
+			height: 50px;
+			background-color: gray;
+		}
+		nav{
+			float: right;
+			width: 760px;
+			height: 50px;
+			background-color: purple;
+		}
+		section{
+			height: 600px;
+			margin-bottom: 10px;
+			/*background-color: yellow;*/
+			overflow: hidden;
+		}
+		.left{
+			float: left;
+			width: 810px;
+			height: 600px;
+			background-color: yellow;
+		}
+		.left-right{
+			float: right;
+			width: 140px;
+			height: 540px;
+			background-color: aqua;
+		}
+		.left-right-on{
+			w
+		}
+		.right{
+			float: right;
+			width: 140px;
+			height: 600px;
+			background-color: pink;
+			margin-left: 10px;
+		}
+		footer{
+			height: 50px;
+			background-color: blue;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<header class="container clearfix">
+		<h1 class="top-left"></h1>
+		<div class="top-left-right"></div>
+		<nav></nav>
+	</header>
+	<section class="container">
+		<div class="left">
+			<div></div>
+			<div class="left-right">
+				<div class="left-right-on"></div>
+				<div class="left-right-down"></div>
+			</div>
+			<div class="left-bottom"></div>
+		</div>
+		<div class="right"></div>
+	</section>
+	<footer class="container"></footer>
+</body>
+</html>

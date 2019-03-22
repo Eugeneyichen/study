@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>004-原型对象.html</title>
+	<script>
+		function person(name,age){
+			//1 this = {}
+			this.name = name;
+			this.age = age;
+			//2.return
+		}
+
+		person.prototype.showName = function(){
+			console.log('I am' + this.name)
+		}
+		person.prototype.showAge = function(){
+			console.log('I am' + this.age)
+		}
+		person.prototype.LEGS = 2;
+
+		console.log('person',person);//
+		console.log('person.prototype',person.prototype);
+		//有一个对象 上有两个属性constructor__proto__
+		console.log('person.prototype.constructor',person.prototype.constructor);
+		console.log(person.prototype.constructor === person);
+		//有一个函数 自身的构造函数
+		console.log('person.prototype.__proto__',person.prototype.__proto__);
+		//对象
+		console.log('person.prototype.__proto__',person.prototype.__proto__ === Object.prototype);
+		//person上的原型__proto__ 指向Object.prototype
+		console.log(Object.prototype);
+
+		console.log(Object.prototype.constructor)
+		//系统创建的函数
+		console.log(Object.prototype.constructor === Object)
+		console.log(Object.prototype.__proto__)
+		//是个空对象 null
+
+		var p1 = new person('tom',18);
+		p1.sex = male;
+		var p2 = new person('leo',20);
+		
+		//加new后，this变成一个构造函数上的实例对象；用new调用后会将实例对象传递返回来
+		p1.showName();
+		p1.showAge();
+		//p1是person，new出来的实例，实例返回this，调用在在构造函数上，谁在调用函数，this是谁，p1调用函数，在执行new是 返回实例，系统自动生成__proto__指向person.prototype（构造函数的原型）
+		console.log(p1.__proto__ === person.prototype)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

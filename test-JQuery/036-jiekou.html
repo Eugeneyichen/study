@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>036-接口封装.html</title>
+</head>
+<body>
+	<button>get1</button>
+	<button>post2</button>
+	<button>getJSON3</button>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$('button').eq(0).on('click',function(){
+			$.get('036-data.json',{name:'why',age:18},function(data){
+				console.log(data)
+			},'json')
+		})
+		$('button').eq(1).on('click',function(){
+			$.post('036-data.json',{name:'why',age:18},function(data){
+				console.log(data)
+			},'text')
+		})
+		$('button').eq(2).on('click',function(){
+			$.getJSON('036-data.json',function(data){
+				console.log(data)
+			})
+		})
+	})
+</script>
+</html>

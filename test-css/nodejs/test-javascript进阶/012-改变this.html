@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>012-改变this.html</title>
+	<script>
+		function show(n1,n2){
+			console.log(this,n1,n2);//谁在调用函数.this是谁
+		}
+		//show();//window
+		// window.show();//window
+		// new show();//用new来调用它 show的一个实例
+		// show(1,2);//参数你n1 = 1 n2 = 2
+		// show.call(1,2);//立即执行第一个参数是函数里的this，第二个是n1 第三个是n3.第一个参数可以改变函数体里的this
+		show.call({name:'tom'},1,2)//this 变为第一个参数
+		show.apply({name:'tom'},[1,2])//立即执行第一个参数是函数里的this,后面用数组
+		var fn = show.bind({name:'tom'});//不会执行返回一个函数 this还是；也可以改变this 返回时一个函数，在调用函数是改变this
+		console.log(fn)
+		fn(1,2)//
+		//传null的话 this不做改变
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>094-bom-关闭窗口.html</title>
+</head>
+<body>
+	<input type="button" value="关闭" id="btn">
+	<input type="button" value="打开" id="btn2">
+
+</body>
+<script>
+	var oBtn = document.getElementById('btn')
+	var oBtn2 = document.getElementById('btn2')
+	oBtn.onclick=function(){
+		window.close()
+	}
+	oBtn2.onclick = function(){
+		window.open('https://www.baidu.com')
+	}
+</script>
+</html>

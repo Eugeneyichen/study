@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>206-原子集合.html</title>
+	<script>
+		var str = '24g54	g5g45r54	g5^%$$#';
+		var rdg1 = /[0-9]/g;
+		var rdg2 = /\d/g;
+		var rdg3 = /[^0-9]/g;
+		var rdg4 = /\D/g;
+		var rdg5 = /[0-9a-z]/g;
+		var rdg6 = /\w/g;
+		var rdg7 = /[^0-9a-z]/g;
+		var rdg8 = /\W/g;
+		var rdg9 = /[\t\n\f\r]/g;
+		var rdg10 = /\s/g;
+		var rdg11 = /[^\t\n\f\r]/g;
+		var rdg12 = /\S/g;
+
+
+		console.log(str);
+		console.log(str.replace(rdg1,'*'));
+		console.log(str.replace(rdg2,'*'));
+		console.log(str.replace(rdg3,'*'));
+		console.log(str.replace(rdg4,'*'));
+		console.log(str.replace(rdg5,'*'));
+		console.log(str.replace(rdg6,'*'));
+		console.log(str.replace(rdg7,'*'));
+		console.log(str.replace(rdg8,'*'));
+		console.log(str.replace(rdg9,'*'));
+		console.log(str.replace(rdg10,'*'));
+		console.log(str.replace(rdg11,'*'));
+		console.log(str.replace(rdg12,'*'));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>026-next-方法的参数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function * gen(w){
+		console.log('w=',w)
+		let y = yield (w+5)
+		console.log('y=',y)
+		let c = yield(y+10)
+		console.log('c=',c)
+		return (w+y+c)
+	}
+	let z = gen(5)
+	console.log(z.next())//value: 10, done: false
+	console.log(z.next())//value: NaN, done: false
+	console.log(z.next())//value: NaN, done: true
+</script>
+</html>

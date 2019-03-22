@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15-秒边时间</title>
+	<script>
+		var iSecond = 5006888;
+
+		var hour = parseInt(iSecond/3600);
+
+		var minute = parseInt((iSecond%3600)/60);
+
+		var sencond = parseInt((iSecond%3600)%60);
+
+		if(hour<10){
+			hour="0"+hour
+		}
+
+		if(minute<10){
+			minute="0"+minute
+		}
+
+		if(sencond<10){
+			sencond="0"+sencond
+		}
+
+		alert(hour+":"+minute+":"+sencond);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

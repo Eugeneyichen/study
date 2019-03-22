@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>157-基础拖拽-滚动条.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#fat{
+			position: relative;
+			width: 800px;
+			height: 30px;
+			background-color: purple;
+			margin: 20px auto;
+		}
+		#box{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50px;
+			height: 30px;
+			background-color: #f67;
+		}
+		#btn{
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="fat">
+		<div id="box"></div>
+	</div>
+	<div id="btn"></div>
+</body>
+<script>
+	var oFat = document.getElementById('fat')
+	var oBox = document.getElementById('box')
+	var oBtn = document.getElementById('btn')
+	var disX=0,dixY=0
+	oBox.onmousedown = function(ev){
+		disX = ev.clientX-oBox.offsetLeft;
+		document.onmousemove = function(ev){
+		var l = ev.clientX - disX
+		if(l < 0){
+			l = 0;
+		}else if(l > oFat.offsetWidth-oBox.offsetWidth){
+			l=oFat.offsetWidth-oBox.offsetWidth;
+		}
+
+		var scale = l / (oFat.offsetWidth -oBox.offsetWidth);
+
+		oBox.style.left = l + 'px';
+		oBtn.style.width = 100 + 500 * scale + 'px';
+		oBtn.style.height = 100 + 500 * scale + 'px';
+		oBtn.style.opacity = 0 + 1 * scale;
+	}
+	document.onmouseup = function(){
+		document.onmousemove = null;
+		document.onmousedown = null;
+	}
+	}
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>153-基础拖拽.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box1{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+		#box2{
+			position: absolute;
+			top: 150px;
+			left:400px;
+			height: 400px;
+			width: 400px; 
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+<script>
+
+	function check(obj1,obj2){
+		if(obj1.offsetLeft + obj1.offsetWidth > obj2.offsetLeft
+			&& obj1.offsetTop + obj1.offsetHeight > obj2.offsetTop
+			&& obj2.offsetLeft + obj2.offsetWidth > obj1.offsetLeft
+			&& obj2.offsetTop + obj2.offsetHeight > obj1.offsetTop){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	var oBox1 = document.getElementById('box1')
+	var oBox2 = document.getElementById('box2')
+	var disX=0,dixY=0
+	oBox1.onmousedown = function(ev){
+		disX = ev.clientX-oBox1.offsetLeft;
+		disY = ev.clientY-oBox1.offsetTop;
+		console.log(disX,disY)
+		document.onmousemove = function(ev){	
+		oBox1.style.left = ev.clientX - disX + 'px';
+		oBox1.style.top =ev.clientY - disY + 'px';
+
+		if(check(oBox1,oBox2)){
+			oBox2.style.backgroundColor ='red';
+		}else{
+			oBox2.style.backgroundColor ='purple';
+		}
+	}
+	document.onmouseup = function(){
+		document.onmousemove = null;
+		document.onmousedown = null;
+	}
+	}
+
+</script>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<form action="https://weibo.com/u/5283632309/home?wvr=5">
+		<h1>用户注册</h1>
+		<p>
+			<label for="username">
+				用户名：
+			</label>
+			<input type="text"  name="username" placeholder="请输入用户名"  autocomplete="on" id="username">
+		</p>
+		<p>
+			<label for="password">
+				密码：	
+			</label>
+			<input type="password" name="password" id="password">
+		</p>
+		<p>
+			性别
+			<input type="radio" name="sex" value="male" checked>男
+			<input type="radio" name="sex" value="female">女
+			<input type="radio" name="sex" value="none">未知
+		</p>
+		<p>
+			爱好
+			<input type="checkbox" name="hobby" value="basketball">篮球
+			<input type="checkbox" name="hobby" value="football">足球
+			<input type="checkbox" name="hobby" value="danceing">跳舞
+		</p>
+		<p>
+			头像
+			<input type="file" name="img">
+		</p>
+		<p>
+			邮箱
+			<input type="email" name="email">
+		</p>
+				<p>
+			年龄：
+			<input type="number" name="number">
+		</p>
+		<p>
+			日期：
+			<input type="date" name="date">
+		</p>
+		<p>
+			颜色
+			<input type="color" name="color">
+		</p>
+		<p>
+			所在城市
+			<select name="city">
+				<optgroup label="不喜">
+					<option value="bj">北京</option>
+					<option value="nj">南京</option>
+				</optgroup>
+				<optgroup label="喜欢">
+					<option value="cd" selected="">成都</option>
+					<option value="sh">上海</option>
+				</optgroup>
+			</select>
+		</p>
+
+		<p>
+			<input type="button" value="按钮">
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+			<!--<input type="image" src="html/hi/1.jpg">-->
+			<input type="hidden" name="secret" value="偷偷的">
+		</p>
+ 		<p>
+ 			所在城市
+ 			<select name="city" >
+ 				<optgroup label="喜欢">
+ 					<option>成都</option>
+ 					<option>上海</option>
+ 				</optgroup>
+ 				<optgroup label="不喜">
+ 					<option>北京</option>
+ 					<option>南京</option>
+ 				</optgroup>
+ 			</select>
+ 		</p>
+ 		<p>
+ 			自我介绍
+ 			<textarea name="inter" cols="30" rows="10"></textarea>
+ 		</p>
+	</form>
+</body>
+</html>

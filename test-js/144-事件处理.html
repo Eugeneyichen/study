@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>144-事件处理.html</title>
+</head>
+<body>
+	<!-- <button id="btn1" onclick="alert('hh')">点我</button> -->
+	<button id="btn1">点我</button>
+	<button id="btn2">移除事件</button>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+
+	// oBtn1.onclick = function(){
+	// 	alert('haha')
+	// }
+	// oBtn1.onclick = function(){
+	// 	alert('hehe')
+	// }//只能显示最近写的一个
+
+	function wyc(){
+		alert('haha')
+	}
+	function why(){
+		alert('hehe')
+	}
+	function ww(){
+		alert('heihei')
+	}
+
+
+	oBtn1.addEventListener('click',wyc,false)
+	oBtn1.addEventListener('click',why,false)
+	oBtn1.addEventListener('click',ww,false)
+
+	oBtn2.addEventListener('click',function(){
+		oBtn1.removeEventListener('click',ww,false)
+	},false)
+</script>
+</html>

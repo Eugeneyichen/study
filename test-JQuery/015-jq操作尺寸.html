@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 500px;
+			height: 500px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+			/*position: relative;*/
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			position: absolute;
+			left: 100px;
+			top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		// console.log($('.son').offset())
+		// console.log($('.son').offset({top:150,left:150}))
+		// console.log($('.son').position())
+	})
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-垂直对齐方式.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 1000px;
+			height: 700px;
+			border:1px solid #000;
+			margin: 50px auto;
+			display: flex;
+			flex-wrap: wrap;
+			/*align-items: stretch;*/
+			/*align-items: flex-start;*/
+			/*align-content: flex-start;*/
+			/*align-items: flex-end;*/
+			/*align-content: flex-end;*/
+			/*align-items: center;*/
+			/*align-content: center;*/
+		}
+		.son{
+			height: 50px;
+		}
+		.son1{
+			width: 50px;
+			background-color: red;
+		}
+		.son2{
+			width: 100px;
+			background-color: yellow;
+		}
+		.son3{
+			width: 900px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son son1">1</div>
+		<div class="son son2">2</div>
+		<div class="son son3">3</div>
+	</div>
+</body>
+</html>

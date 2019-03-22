@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>018-箭头函数和普通函数的区别.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*
+	//箭头函数没有原型对象,所以不能用箭头函数来定义构造函数
+	var show = function(){
+
+	}
+	show.prototype = {}
+	var show2 = new show;
+	console.log(show2)
+
+	var show = () =>{}
+	show.prototype = {};
+	var show2 = new show;
+	console.log(show2)
+	*/
+
+	/*
+	//箭头函数中没有arguments
+	function show(){
+		console.log(arguments)
+	}
+	show(11,22,33)
+
+	let show = () =>{
+		console.log(arguments)
+	}
+	show(11,22,33)
+	*/
+
+	/*
+	//如果定义有名称的箭头函数,需要把箭头函数赋值给变量,所以箭头函数不存在生命的提升
+	show()
+	function show(){
+		console.log('laia')
+	}
+	show()
+
+	show()
+	let show = ()=>{
+		console.log('laia')
+	}
+	show()
+	*/
+</script>
+</html>

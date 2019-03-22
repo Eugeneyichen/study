@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-扩展插件.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			margin: 10px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<button>开始</button>
+	<div>div1</div>
+	<div>div2</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+;(function($){
+		$.fn.setColor = function(options){
+			var DEFAULTS = {backgroundColor:'#ff6700'}
+			var options = $.extend({},DEFAULTS,options);
+			return this.each(function(index,elem){
+				this.style.backgroundColor = options.backgroundColor;
+			})
+		}
+	})(jQuery)
+</script>
+<script>
+	$(function(){
+		$('button').on('click',function(){
+			$('div').setColor({}).animate({width:400},1000)
+		})
+	})
+</script>
+</html>

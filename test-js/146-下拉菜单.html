@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>146-下拉菜单.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#min{
+			height: 100px;
+			width: 600px;
+			background-color: #f67;
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">菜单</button>
+	<div id="min"></div>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var oMin = document.getElementById('min');
+
+	oBtn.addEventListener('click',function(ev){
+		oMin.style.display = 'block';
+		ev.stopPropagation()
+	},false)
+	oMin.addEventListener('click',function(ev){
+		oMin.style.display = 'block';
+		ev.stopPropagation()
+	},false)
+	document.addEventListener('click',function(){
+		oMin.style.display = 'none'
+	},false)
+</script>
+
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>080-正方体</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0; 
+		}
+		body{
+			perspective: 500px;
+		}
+		ul{
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			position: relative;
+			transform-style: preserve-3d;
+			border:1px solid #000;
+		}
+	 	li{
+			width: 100px;
+			height: 100px;
+			list-style: none;
+			position: absolute;
+
+		}
+		ul li:nth-child(1){
+			background: red;
+			transform: rotateX(90deg) 
+		}
+		ul li:nth-child(2){
+			background: yellow;
+			/*transform: rotateX(180deg) translate(Z)(100PX);*/
+		}
+		ul li:nth-child(3){
+			background: blue;
+			/*transform: rotateX(270deg) translate(Z)(100PX);*/
+		}
+		ul li:nth-child(4){
+			background: pink;
+			/*transform: rotateX(360deg) translate(Z)(100PX);*/
+		}
+		ul li:nth-child(5){
+			background: green;
+		}
+		ul li:nth-child(6){
+			background: aqua;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<!-- <li></li> -->
+		<!-- <li></li> -->
+		<!-- <li></li> -->
+		<!-- <li></li> -->
+		<!-- <li></li> -->
+	</ul>
+</body>
+</html>
