@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0305</title>
+	<style>
+		button{
+			width: 80px;
+			height: 40px;
+		}
+		.box{
+			/*display: none;*/
+			position: absolute;
+			left:200;
+			top:400px;
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<button>按钮</button>
+	<div class="box"></div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/0305.js"></script>
+<script>
+	$(function(){
+		$('button').on('click',function(){
+			$('.box').setBox();
+		})
+	})
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father{
+			width: 1000px;
+			height: 600px;
+			border: 1px solid #000;
+			margin: 20px auto;
+			display: flex;
+		}
+		.son1{
+			width: 200px;
+			height: 50px;
+			background-color: blue;
+			flex-shrink: 0;
+		}
+		.son2{
+			width: 400px;
+			height: 50px;
+			background-color: orange;
+			flex-shrink: 1;
+		}
+		.son3{
+			width: 600px;
+			height: 50px;
+			background-color: pink;
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son3"></div>
+	</div>
+</body>
+</html>

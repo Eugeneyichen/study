@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0319-test.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	class today{
+		constructor(name,age){
+			this.name = name;
+			this.age = age
+		}
+		toName(){
+			console.log("I am" + this.name)
+		}
+		toAge(){
+			console.log("I am" + this.age + "years older")
+		}
+		static toEv(){
+			console.log('today:::')
+		}
+	}
+	let y = new today("wyc",18)
+	console.log(y)
+	y.toName();
+	y.toAge();
+	today.toEv();
+
+	class tomorrow extends today{
+		constructor(name,age,hobby){
+			super(name,age)
+			this.hobby = hobby
+		}
+		toHobby(){
+			console.log("I love" + this.hobby)
+		}
+		static toTo(){
+			console.log('tomorrow::::')
+		}
+	}
+	let w = new tomorrow('wzq',15,'music')
+	console.log(w)
+	w.toName();
+	w.toAge();
+	w.toHobby();
+	tomorrow.toEv();
+	tomorrow.toTo();
+</script>
+</html>

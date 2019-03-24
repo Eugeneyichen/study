@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0314测试.html</title>
+	<script>
+		var arr = [1,2,3,4,5,6];
+		var wyc = arr.map(function(obj,index){
+			return function wzq(){
+				return obj;
+			}
+		})
+		console.log(wyc)
+		wyc.forEach(function(lkj,index){
+			console.log(lkj());
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

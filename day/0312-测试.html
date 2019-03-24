@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0312-测试.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 700px;
+			height: 470px;
+			border: 1px solid #000;
+			margin: 50px auto;	
+		}
+		.box1{
+			height: 200px;
+			display: flex;
+			flex-direction: row-reverse;
+		}
+		.box2{
+			/*width: 300px;*/
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			flex-direction: row-reverse;
+			/*justify-content: flex-end*/
+
+		}
+		.box3{
+			height: 200px;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row-reverse;
+			justify-content: flex-end
+		}
+		.son{
+			width: 70px;
+			height: 70px;
+			background-color: #f67;
+			text-align: center;
+			line-height: 70px;
+			margin-left: 10px;
+		}
+		.son9{
+			margin-left: 0;
+		}
+		.son6{
+			margin-left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="box1">
+			<div class="son son1">son1</div>
+			<div class="son son2">son2</div>
+			<div class="son son3">son3</div>
+		</div>
+		<div class="box2">
+			<div class="son son4">son4</div>
+			<div class="son son5">son5</div>
+			<div class="son son6">son6</div>
+		</div>
+		<div class="box3">
+			<div class="son son7">son7</div>
+			<div class="son son8">son8</div>
+			<div class="son son9">son9</div>
+		</div>
+	</div>
+</body>
+</html>

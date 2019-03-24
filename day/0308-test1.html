@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0308</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function * gen(a){
+		let b = yield (a+5);
+		let c = yield (b+10);
+		let d = yield (c+10);
+		return (d+100)
+	}
+	let g = gen(5);
+	g.next()
+	g.next()
+	g.next()
+	var result = g.next(5)
+	console.log(result)
+</script>
+</html>
