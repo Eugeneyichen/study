@@ -1,0 +1,12 @@
+
+.carousel-inner .item img{
+	width: 100%;
+	height: 420px;
+}
+.col-md-3 .item img{
+	width: 100%;
+	height: 205px;	
+}
+.col-md-3 .active img{
+	margin-bottom: 10px;
+}
