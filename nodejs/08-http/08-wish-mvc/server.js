@@ -33,10 +33,13 @@ const server = http.createServer((req,res)=>{
 		})
 	}else{//路由处理
 		let paths = pathname.split('/');
-		let controller = paths[1] || 'wish';
+		let controller = paths[1] || 'Index';
 		let action = paths[2] || 'index';
 		let args = paths.slice(3);
 		try{
+			//约定：
+			//所有的controller都在./controller/下
+			//Controller文件的名称必须和请求的名称一致
 			let mode = require('./Controller/'+controller);
 			mode[action] && mode[action].apply(null,[req,res].concat(args));
 		}
