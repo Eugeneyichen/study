@@ -15,7 +15,7 @@ db.once('open', ()=>{
 	console.log('connection sucessful::');
 	YichenModel.insertMany({
 		name:"wyc",
-		age:18,
+		age:"18",
 		major:'music'
 	},(err,docs)=>{
 		if(err){
