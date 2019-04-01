@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	{% block title %}{% endblock %}
+	</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" id="kz-active">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand link" href="javascript:;">我的个人微博</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+	        <li><a href="list.html">微博</a></li>
+	        <li><a href="list.html">视频</a></li>
+	        <li><a href="list.html">相册</a></li>
+	        <li><a href="list.html">故事</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					{% block content %}{% endblock %}
+				</div>
+
+				<div class="col-md-3">
+					 {% if userInfo._id  %}
+			          <div class="user-panel" id='user-info'>
+			            欢迎<span>{{ userInfo.username }}</span>
+			            {% if userInfo.isAdmin %}
+			            <a class="link" href="/admin">进入管理中心</a>
+			            {% else %}
+			            <a class="link" href="/home">进入个人中心</a>
+			            {% endif %}
+			            <a class="link" href="javascript:;" id='logout'>退出</a>
+			            <div class="form-group">
+			              <div class="col-sm-12">
+			                <p class="text-danger err"></p>
+			              </div>
+			            </div>              
+			          </div>
+			          {% else %}
+			          <div class="form-horizontal user-panel" id='register' style="display: none;">
+			            <div class="form-group">
+			              <label class="col-sm-4 control-label">用户名</label>
+			              <div class="col-sm-6">
+			                <input autocomplete="off" type="text" class="form-control" name='username' placeholder="请输入用户名">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <label class="col-sm-4 control-label">密码</label>
+			              <div class="col-sm-6">
+			                <input autocomplete="off" type="password" class="form-control" name="password" placeholder="请输入密码">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <label class="col-sm-4 control-label">重复密码</label>
+			              <div class="col-sm-6">
+			                <input autocomplete="off" type="password" class="form-control" name="repassword" placeholder="请再次输入密码">
+			              </div>
+			            </div>            
+			            <div class="form-group">
+			              <div class="col-sm-offset-4 col-sm-6">
+			                <a href="javascript:;" class="btn btn-primary" id='sub-register'>提交</a>
+			                <a href="javascript:;" class="link" id='go-login'>已有账号,去登录</a>
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <div class="col-sm-12">
+			                <p class="text-danger err"></p>
+			              </div>
+			            </div>            
+			          </div> 
+
+			          <div class="form-horizontal user-panel" id='login'>
+			            <div class="form-group">
+			              <label class="col-sm-4 control-label">用户名</label>
+			              <div class="col-sm-6">
+			                <input autocomplete="off" type="text" class="form-control" name='username' placeholder="请输入用户名">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <label class="col-sm-4 control-label">密码</label>
+			              <div class="col-sm-6">
+			                <input autocomplete="off" type="password" class="form-control" name="password" placeholder="请输入密码">
+			              </div>
+			            </div>            
+			            <div class="form-group">
+			              <div class="col-sm-offset-4 col-sm-6">
+			                <a href="javascript:;" class="btn btn-primary" id='sub-login'>提交</a>
+			                <a href="javascript:;" class="link" id='go-register'>免费注册</a>
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <div class="col-sm-12">
+			                <p class="text-danger err"></p>
+			              </div>
+			            </div>            
+			          </div>
+			          {% endif %} 
+			          <!--用户注册登录-->          
+					<div class="ad">
+						<a href="#" class="thumbnail">
+      						<img src="img/a1.jpg" alt="...">
+    					</a>
+					</div>
+					<div class="ad">
+						<a href="#" class="thumbnail">
+      						<img src="img/a2.jpg" alt="...">
+    					</a>
+					</div>
+					<div class="panel panel-default" id="zl">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">个人资料</h3>
+						</div>
+						<div class="panel-body">
+					    	<div class="media">
+								<div class="media-left">
+							    	<a href="#">
+							      		<img class="media-object img-circle" src="img/shuai.jpg" alt="...">
+							    	</a>
+								</div>
+								<div class="media-body">
+							    	<h4 class="media-heading"><strong>雙葉幼稚園某之助</strong></h4>
+							    		一位酷似吴彦祖，彭于晏 ，易烊千玺的博主，日常以照片的形式分享与家人、老师、同学、邻居、路人等之间所发生的故事
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default hot-list" id="zl">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">今日热搜</h3>
+						</div>
+						<div class="panel-body">
+					    	<div class="media">
+								<div class="media-body">
+							    	<ul class="list-group">
+										<li class="list-group-item">
+											<a href="detail.html" class="link text-ellipsis">
+												王翌宸许昌易烊千玺？
+											</a>
+										</li>
+										<li class="list-group-item">
+											<a href="detail.html" class="link text-ellipsis">
+												王翌宸许昌吴彦祖？
+											</a>
+										</li>
+										<li class="list-group-item">
+											<a href="detail.html" class="link text-ellipsis">
+												王翌宸许昌彭于晏？
+											</a>
+										</li>
+										<li class="list-group-item">
+											<a href="detail.html" class="link text-ellipsis">
+												王翌宸许昌贾斯汀比伯？
+											</a>
+										</li>
+										<li class="list-group-item">
+											<a href="detail.html" class="link text-ellipsis">
+												王翌宸许昌莱昂纳多？
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default" id="zl">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">我的二维码</h3>
+						</div>
+						<div class="panel-body">
+					    	<img src="img/2wm.jpg" alt="" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="https://weibo.com/5283632309/profile?topnav=1&wvr=6&is_all=1" class="link">雙葉幼稚園某之助的微博</a> Copyright © 2009-2019 WEIBO
+	</footer>
+
+</body>
+<script src="lib/js/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+{% block footer %}{% endblock %}
+</html>
