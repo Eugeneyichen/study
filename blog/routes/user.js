@@ -22,7 +22,8 @@ router.post("/register",(req,res)=>{
 			//插入新用户
 			UserModel.insertMany({
 				username,
-				password:hmac(password)
+				password:hmac(password),
+				// isAdmin:true
 			})
 			.then(user=>{
 				res.json(result)
@@ -50,7 +51,8 @@ router.post("/login",(req,res)=>{
 	.then(user=>{
 		if(user){//登陆成功
 			result.data = user
-			req.cookies.set('userInfo',JSON.stringify(user))
+			// req.cookies.set('userInfo',JSON.stringify(user))
+			req.session.userInfo = user
 			res.json(result)
 		}else{
 			result.status = 10
@@ -65,13 +67,14 @@ router.post("/login",(req,res)=>{
 	})
 })
 
-//推出处理
+//退出处理
 router.get('/logout',(req,res)=>{
 	const result = {
 		status:0,//成功
 		message:''
 	}
-	req.cookies.set('userInfo',null);
+	// req.cookies.set('userInfo',null);
+	req.session.destroy()
 	res.json(result)
 })
 

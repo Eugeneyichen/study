@@ -129,7 +129,7 @@
 			}
 		})
 		.fail(function(err){
-			$err.html('请求失败 请稍后再试');
+			$('#user-info .err').html('请求失败 请稍后再试');
 		})
 	})
 

@@ -3,7 +3,9 @@
   用户列表
 {% endblock %}
 
+
 {% block content %}
+<div class="content">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -28,4 +30,8 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
+{% if pages > 1 %}
+{% include './pagination.html' %}
+{% endif %}
 {% endblock %}
