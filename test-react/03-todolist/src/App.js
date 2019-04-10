@@ -12,22 +12,39 @@ class App extends Component{
 		}
 	}
 	handleAdd(){
+		/*
 		this.setState({
 			list:[...this.state.list,this.state.val],
 			val:''
 		})
+		*/
+		this.setState(perState=>({
+			list:[...perState.this.state.val],
+			val:''
+		}))
 	}
 	handleChange(ev){
+		/*
 		this.setState({
 			val:ev.target.value
 		})
+		*/
+		const val = ev.target.value
+		this.setState(()=>({
+			val
+		}))
 	}
 	handleDel(index){
 		// console.log('000.0',index)
 		// this.state.list.splice(index,1)
 		const list = [...this.state.list]
 		list.splice(index,1)
+		/*
 		this.setState({
+			list
+		})
+		*/
+		this.setState(()=>{
 			list
 		})
 	}
